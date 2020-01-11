@@ -1,0 +1,77 @@
+input.ng-invalid.ng-touched {
+    border : 2px solid red;
+}
+input {
+    border-left: 3px solid #3FB0AC;
+    width:25rem;
+}
+/* Loader */
+.background {
+    position:absolute;
+    height:100vh;
+    width:100%;
+    background:rgba(0,0,0,0.5);
+    z-index:2;
+}
+.loader {
+    width:100px;
+    height:200px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:2;
+}
+.loader-circle {
+    width:calc(100% - 0.000001px);
+    height:calc(100% - 0.000001px);
+    border:8px solid #173E43;
+    border-top:8px solid #3FB0AC;
+    border-radius:50%;
+    animation:rotate 5s linear infinite;
+}
+@keyframes rotate {
+    100%{transform:rotate(360deg);}
+}
+/* Loader */
+.all {
+    background:url();
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    margin-bottom:10rem;
+}
+.box {
+    width:31rem;
+    margin-top:12rem;
+    border-radius: 10px;
+    border-bottom: 5px solid #173E43;
+    padding:10px 50px;
+}
+.head {
+    text-align : center;
+    color : #173E43;
+    margin-bottom:2rem;
+}
+.head h4{
+    font-family: 'Lato', sans-serif;
+}
+.mybutton {
+    margin:1rem 10rem;
+    padding : 8px 25px;
+    border : 0px;
+    letter-spacing:0.8px;
+    background-image: linear-gradient(to right, #173E43 , #3FB0AC);
+    color : #FFFFFF;
+    border-radius : 2px;
+}
+.mybutton:hover {
+    box-shadow: 2px 2px 18px 5px rgba(0,0,0,0.1);
+    transition:0.2s;
+}
+.foot {
+    text-align:center;
+    padding : 10px;
+}
+.mybutton:focus {
+    outline:none;
+}

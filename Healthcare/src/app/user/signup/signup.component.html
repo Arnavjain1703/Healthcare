@@ -1,0 +1,106 @@
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap');
+</style>
+<div *ngIf=load class="background">
+    <div class="loader">
+        <div class="loader-circle">
+            <div class="loader-circle">
+                <div class="loader-circle">
+                    <div class="loader-circle">
+                        <div class="loader-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class=" bg">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 center">
+            <div class="box">
+            <div class="head">
+                <h2><b>SignUp</b></h2>
+            </div>
+            <form (ngSubmit)="onSignup(f)" #f="ngForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input
+                    placeholder = "Enter FullName" 
+                    type="name" 
+                    id="name" 
+                    name="name" 
+                    ngModel 
+                    class="form-control"
+                    required 
+                    #name="ngModel">
+                    <span 
+                    class="help-block"
+                    *ngIf="!name.valid && name.touched"
+                    style="color:red;">Enter a valid Name</span>
+                </div>
+             
+                <div class="form-group">
+                    <label for="email">E-Mail</label>
+                    <input 
+                    placeholder = "e.g.(abc@xyz.com)"
+                    type="email" 
+                    id="email" 
+                    name="email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    ngModel
+                    class="form-control"
+                    required
+                    #email="ngModel">
+                    <span 
+                    class="help-block"
+                    *ngIf="!email.valid && email.touched"
+                    style="color:red;">Enter valid E-mail</span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                    placeholder = "Minimum length 6 characters"
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    ngModel 
+                    class="form-control"
+                    required 
+                    [minlength]="6"
+                    #password="ngModel">
+                    <span
+                    class="help-block"
+                    *ngIf="!password.valid && password.touched"
+                    style="color:red;">Enter minimum 6 character password</span>
+                </div>
+                <div class="form-group">
+                    <label for="cpassword">Confirm Password</label>
+                    <input
+                    placeholder = "Confirm your Password"
+                    appConfirmPassword="password"
+                    type="password" 
+                    id="confirmPassword" 
+                    name="confirmPassword" 
+                    ngModel 
+                    class="form-control"
+                    required 
+                    [minlength]="6"
+                    #confirmPassword="ngModel">
+                    <span
+                    class="help-block"
+                    *ngIf="confirmPassword.touched && confirmPassword.errors?.required "
+                    style="color:red;">Confirm Password is required</span>
+                    <span
+                    class="help-block"
+                    *ngIf="confirmPassword.touched && confirmPassword.errors?.notEqual &&
+                    !confirmPassword.errors?.required" 
+                    style="color:red;">Password doesn't match</span>
+                </div>
+                <button type="submit" class="btn mybutton"  [disabled]="!f.valid">SignUp</button>
+            </form>
+            <p class="foot">Already on HealthCare ? <a routerLink='/login'>LogIn</a></p>
+        </div>
+    </div>
+    <div class="col-md-6 col-xs-0" ></div>
+    </div>
+</div>

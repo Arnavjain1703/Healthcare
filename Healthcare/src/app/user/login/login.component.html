@@ -1,0 +1,68 @@
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Ubuntu&display=swap');
+</style>
+<!-- Loader -->
+<div *ngIf=load class="background">
+    <div class="loader">
+        <div class="loader-circle">
+            <div class="loader-circle">
+                <div class="loader-circle">
+                    <div class="loader-circle">
+                        <div class="loader-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Loader -->
+<div class="container-fluid all">
+    <div class="row">
+        <div class="col-md-4 col-sm-2"></div>
+        <div class=" col-md-4 col-sm-8 ">
+            <div class="box">
+                <div class="head">
+                    <h2><b>LogIn</b></h2>
+                </div>
+                <form (ngSubmit)="onLogin(f)" #f="ngForm">
+                    <div class="form-group">
+                        <label for="email">E-Mail</label>
+                        <input 
+                        placeholder = "e.g.(abc@xyz.com)"
+                        type="email"
+                        id="email" 
+                        name="email"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        ngModel
+                        class="form-control" 
+                        required
+                        #email="ngModel">
+                        <span 
+                        class="help-block"
+                        *ngIf="!email.valid && email.touched"
+                        style="color:red;">Enter a valid Email</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input 
+                        placeholder = "Minimum length 6 characters"
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        ngModel 
+                        class="form-control" 
+                        required
+                        [minlength]="6"
+                        #password="ngModel">
+                        <span
+                        class="help-block"
+                        *ngIf="!password.valid && password.touched"
+                        style="color:red;">Enter minimum 6 character password</span>
+                    </div>
+                    <button type="submit" class="btn mybutton" [disabled]="!f.valid">LogIn</button>
+                </form>
+                <p class="foot">Don't have an account ? <a routerLink='/signup'>SignUp</a></p>
+            </div>
+        </div>
+    </div>
+</div>
