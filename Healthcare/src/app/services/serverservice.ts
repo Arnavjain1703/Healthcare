@@ -7,7 +7,7 @@ export class ServerService
 {
 
 
-private rootUrl="https://05670ab4.ngrok.io";
+private rootUrl="https://05ffcc04.ngrok.io";
 
 
 constructor( 
@@ -29,7 +29,7 @@ logInUser(email:string ,password:string)
   
 }
 
-signUpUser(name:string,email:string,password:string,confirm_password)
+signUpUser(name:string,email:string,password:string,confirm_password:string)
 {
  const headers = new HttpHeaders({'Content-Type':'application/json'});
  console.log(JSON.stringify({name,email,password,confirm_password}));
@@ -50,4 +50,15 @@ verifyUser(otp:number, id:number)
     console.log(this.rootUrl+'/validateotp/'+id+'/');
     return this.http.post(this.rootUrl+'/validateotp/'+id+'/',JSON.stringify({otp}),{headers:headers})  
 }
+
+
+loggedIn()
+{
+  return !!localStorage.getItem('token')
+}
+logout()
+  {
+    localStorage.removeItem('token');
+
+  }
 }

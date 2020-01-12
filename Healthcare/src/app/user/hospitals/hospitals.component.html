@@ -1,0 +1,61 @@
+<div class="back">
+<div class="height padding">
+
+ <particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
+
+ <div class=""></div>
+
+ <div class="row ">
+     <div class=" col-lg-3 col-sm-1 ">
+
+     </div>
+     <div class="col-lg-7 col-sm-10 ">
+         <div class="row">
+        
+            <app-diseases-item 
+            *ngFor = " let Disease of Diseases"
+
+               [Disease] = Disease                
+            >
+
+
+            </app-diseases-item>
+          
+
+           
+         </div>
+     </div>
+
+     
+     <div class=" col-lg-3 col-sm-1 ">
+
+     </div>
+ </div>
+
+
+
+di
+
+
+
+
+
+<div class="row" >
+       
+    
+          
+    <app-hospital-item
+     
+    *ngFor="let Hospital of  Hospitals" 
+     
+    [Hospital]="Hospital"
+    
+    >
+
+    </app-hospital-item>
+
+  
+
+
+</div>
+</div>

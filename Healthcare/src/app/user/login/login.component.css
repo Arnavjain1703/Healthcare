@@ -3,7 +3,7 @@ input.ng-invalid.ng-touched {
 }
 input {
     border-left: 3px solid #3FB0AC;
-    width:25rem;
+    width:100%;
 }
 /* Loader */
 .background {
@@ -41,11 +41,11 @@ input {
     margin-bottom:10rem;
 }
 .box {
-    width:31rem;
-    margin-top:12rem;
+    width:100%;
+    margin-top:7rem;
     border-radius: 10px;
     border-bottom: 5px solid #173E43;
-    padding:10px 50px;
+    
 }
 .head {
     text-align : center;
@@ -55,8 +55,12 @@ input {
 .head h4{
     font-family: 'Lato', sans-serif;
 }
+.center
+{
+    text-align: center;
+}
 .mybutton {
-    margin:1rem 10rem;
+    /* margin:1rem 10rem; */
     padding : 8px 25px;
     border : 0px;
     letter-spacing:0.8px;

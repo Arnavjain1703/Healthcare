@@ -1,0 +1,19 @@
+
+
+
+.height
+{
+    /* height:100vh; */
+    background: url('/assets/images/background.svg');
+    background-repeat:no-repeat;
+}
+
+.col-sm-6
+{
+    text-align:center;
+
+}
+.padding
+{
+    padding-top:22%;
+}

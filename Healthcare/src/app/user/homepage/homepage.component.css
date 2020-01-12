@@ -1,0 +1,106 @@
+.section1 {
+    height:auto;
+    width:100%;
+}
+.vector img {
+    margin-top:2rem;
+    margin-left:-5rem;
+    width:35rem;
+}
+.text {
+    margin-top:1rem;
+    padding:50px;
+}
+.text h2 {
+    margin-top:60px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:600;
+    color:#173E43;
+}
+.text h3 {
+    margin-top:90px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:600;
+    color:#173E43;
+}
+.box {
+    margin-top:2rem;
+    margin-left:8rem;
+    height:15px;
+    width:45px;
+    background-color:#3FB0AC;
+    animation:move 1s alternate infinite;
+}
+.box1 {
+    margin-top:2.5rem;
+    height:15px;
+    width:45px;
+    background-color:#3FB0AC;
+    animation:movef 1s alternate infinite;
+}
+.rotate {
+    width:6rem;
+    animation:rotate 5s linear infinite;
+}
+.section2 {
+    height:auto;
+    margin-top:5rem;
+    padding:2rem;
+    text-align: center;
+    background-color:#3FB0AC;
+    font-family: 'Poppins', sans-serif;
+    color:#173E43;
+    background-size: cover;
+}
+.section3 {
+    /* position:absolute; */
+    margin-top:3rem;
+    height:auto;
+    width:100%;
+}
+.contentbox {
+    font-family: 'Montserrat', sans-serif;
+    margin-top:3rem;
+    height:auto;
+    padding:2rem;
+    /* background-color:#FAE596; */
+    background:linear-gradient(#3FB0AC,white);
+    box-shadow: 2px 2px 18px 5px rgba(0,0,0,.1);
+}
+.section4 {
+    height:auto;
+    width:100%;
+}
+.contentbox2 {
+    font-family: 'Montserrat', sans-serif;
+    margin-top:8rem;
+    height:auto;
+    padding:2rem;
+    /* background-color:#FAE596; */
+    background:linear-gradient(#3FB0AC,white);
+    box-shadow: 2px 2px 18px 5px rgba(0,0,0,.1);
+}
+@keyframes rotate {
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+@keyframes move {
+    0%{transform:translateX(0px);}
+    100%{transform:translateX(-4rem);}
+}
+@keyframes movef {
+    0%{transform:translateX(0rem);}
+    100%{transform:translateX(2.5rem);}
+}
+@keyframes movevertical {
+    0%{transform:translateY(0rem);}
+    100%{transform:translateY(1.5rem);}
+}
+@keyframes moveright {
+    0%{transform:translateX(0rem);}
+    100%{transform:translateX(1rem);}
+}
+@keyframes moveleft {
+    0%{transform:translateX(0rem);}
+    100%{transform:translateX(-1rem);}
+}

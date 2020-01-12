@@ -18,8 +18,8 @@
 <!-- Loader -->
 <div class="container-fluid all">
     <div class="row">
-        <div class="col-md-4 col-sm-2"></div>
-        <div class=" col-md-4 col-sm-8 ">
+        <div class="col-lg-4 col-md-3 col-sm-2"></div>
+        <div class=" col-lg-4 col-md-6 col-sm-8 ">
             <div class="box">
                 <div class="head">
                     <h2><b>LogIn</b></h2>
@@ -59,10 +59,13 @@
                         *ngIf="!password.valid && password.touched"
                         style="color:red;">Enter minimum 6 character password</span>
                     </div>
+                    <div class="center">
                     <button type="submit" class="btn mybutton" [disabled]="!f.valid">LogIn</button>
+                    </div>
                 </form>
                 <p class="foot">Don't have an account ? <a routerLink='/signup'>SignUp</a></p>
             </div>
         </div>
+        <div class="col-lg-4 col-md-3 col-sm-2"></div>
     </div>
 </div>

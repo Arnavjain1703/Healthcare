@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
       (response) => {
         console.log(response);
         this.tk = response ;
+        localStorage.setItem('token',this.tk.token);
       
     
     

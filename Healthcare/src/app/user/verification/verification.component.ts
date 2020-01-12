@@ -78,9 +78,9 @@ export class VerificationComponent implements OnInit {
                     this.tk = response ;
                     console.log(this.tk);
                     // console.log(this.tk.userLoginResponse.userName);
-                    localStorage.setItem('token', this.tk.userLoginResponse.token);
+                    localStorage.setItem('token', this.tk.token);
                     // localStorage.setItem('name',this.tk.userLoginResponse.userName);
-                    this.router.navigate(['/user']);
+                    this.router.navigate(['/']);
                   },
                   (error) =>console.log(error), 
                 );

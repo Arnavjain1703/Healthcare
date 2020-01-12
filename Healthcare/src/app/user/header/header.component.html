@@ -1,0 +1,29 @@
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Lato|Montserrat|Poppins|Roboto&display=swap');
+</style>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top ">
+  <a class="navbar-brand" href="#"><img class="height" src ="/assets/images/logo.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      
+    </ul>
+    <ul>
+      <a routerLink='/login'><button *ngIf="!serverservice.loggedIn()" class="login mouseover">LogIn</button></a>
+      <a routerLink='/signup'><button *ngIf="!serverservice.loggedIn()" class="login mouseover">SignUp</button></a>
+     
+      <a routerLink='/'>
+          <button 
+          *ngIf="serverservice.loggedIn()" 
+          class="login mouseover"
+          (click)="serverservice.logout()">Log Out</button>
+      </a>
+    </ul>
+  </div>
+</nav>

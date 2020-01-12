@@ -36,7 +36,7 @@ input {
 }
 /* Loader */
 .bg {
-    background:url();
+    background:url('/assets/images/signup2.png');
     background-size:100% auto;
     background-position:center center;
     background-repeat:no-repeat;

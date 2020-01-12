@@ -10,7 +10,7 @@ export class DiseaseService
        new Diseases('Heart Disease',1),
        new Diseases('Cancer',1),
        new Diseases('Unitentional injury',1),
-       new Diseases('Respiratory Disease',1),,
+       new Diseases('Respiratory Disease',1),
        new Diseases('Stork Disease',1),
        new Diseases('Alzheimers Disease',1),
        new Diseases('Diabetes',1),
