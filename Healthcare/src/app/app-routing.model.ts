@@ -5,6 +5,7 @@ import { LoginComponent } from './user/login/login.component';
 import { VerificationComponent } from './user/verification/verification.component';
 import { HomepageComponent } from './user/homepage/homepage.component';
 import { HospitalsComponent } from './user/hospitals/hospitals.component';
+import { DoctorsComponent } from './user/doctors/doctors.component';
 
 
 const appRoutes: Routes=[
@@ -13,7 +14,8 @@ const appRoutes: Routes=[
     {path:'signup',component:SignupComponent},
     {path:'verification/:id',component:VerificationComponent},
     {path:'frontpage',component:HomepageComponent},
-    {path:'hospital',component:HospitalsComponent}
+    {path:'hospital',component:HospitalsComponent},
+    {path:'doctor/:id',component:DoctorsComponent}
 
     
 ]

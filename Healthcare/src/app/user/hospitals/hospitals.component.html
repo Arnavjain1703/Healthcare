@@ -1,12 +1,44 @@
 <div class="back">
 <div class="height padding">
 
+
+    <div class="row">
+
+        <div  class=" col-sm-0 col-md-1 col-lg-2"></div>
+
+        <div class="col-sm-6 col-md-5 col-lg-4 center">
+         
+            <img class="image" src ="/assets/images/doctor.svg">
+     
+        </div>
+        
+        
+        
+        <div class="col-sm-6 col-md-5 col-lg-4 ">
+     
+            <div class="para"> 
+                
+       
+                   Hii! Arnav  Here Are Some Diseases Healps you to Search Your Preffered Hospital And Doctors
+       
+    
+            </div>
+     
+        </div>
+
+        <div  class=" col-sm-0 col-md-1 col-lg-2"></div>
+
+     
+      </div>
+
  <particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
 
  <div class=""></div>
 
  <div class="row ">
      <div class=" col-lg-3 col-sm-1 ">
+
+
 
      </div>
      <div class="col-lg-7 col-sm-10 ">
@@ -33,11 +65,16 @@
  </div>
 
 
-
-di
-
+ 
 
 
+
+<div class="center heading">
+
+    Hospitals Having  Facilities to Cure Diseases
+
+
+</div>
 
 
 <div class="row" >
@@ -46,15 +83,19 @@ di
           
     <app-hospital-item
      
-    *ngFor="let Hospital of  Hospitals" 
+    *ngFor="let item of  Hospitals, let i = index" 
      
-    [Hospital]="Hospital"
+    [Hospital]=item
+     [index] = i
     
     >
 
     </app-hospital-item>
 
-  
+    <!-- <ngb-pagination
+  [(page)]="page"
+  [pageSize]="pageSize"
+  [collectionSize]="Hospitals.length"></ngb-pagination> -->
 
 
 </div>

@@ -5,7 +5,7 @@ export class HospitalService
 {
 
 
-    HospitalChanged = new Subject<Hospital>();
+    HospitalChanged = new Subject<Hospital[]>();
 
 
     private Hospitals:Hospital[] = 

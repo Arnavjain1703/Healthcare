@@ -19,6 +19,11 @@ import { HospitalItemComponent } from './user/hospitals/hospital-item/hospital-i
 import { HospitalService } from './services/hospital.service';
 import { DiseasesItemComponent } from './user/hospitals/diseases-item/diseases-item.component';
 import { DiseaseService } from './services/DiseasesService';
+import { JwPaginationComponent } from 'jw-angular-pagination';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { DoctorsComponent } from './user/doctors/doctors.component';
+import { DoctorItemComponent } from './user/doctors/doctor-item/doctor-item.component';
+import { DoctorService } from './services/Doctorservice';
 
 @NgModule({
   declarations: [
@@ -32,17 +37,22 @@ import { DiseaseService } from './services/DiseasesService';
     HospitalsComponent,
     HospitalItemComponent,
     DiseasesItemComponent,
+    JwPaginationComponent,
+    DoctorsComponent,
+    DoctorItemComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ParticlesModule
+    ParticlesModule,
+    NgbModule
     
   
   ],
-  providers: [ServerService,HospitalService,DiseaseService],
+  providers: [ServerService,HospitalService,DiseaseService,DoctorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

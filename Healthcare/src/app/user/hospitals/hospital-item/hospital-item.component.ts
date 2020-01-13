@@ -13,6 +13,7 @@ export class HospitalItemComponent implements OnInit {
   ngOnInit() {
   }
    
-  @Input () Hospital:Hospital  
+  @Input () Hospital:Hospital  ;
+  @Input () index:Number;
   
 }

@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HospitalService } from 'src/app/services/hospital.service';
 import { Hospital } from 'src/app/models/hospital.model';
 import { DiseaseService } from 'src/app/services/DiseasesService';
 import { Diseases } from 'src/app/models/Diseases.model';
+import { HospitalItemComponent } from './hospital-item/hospital-item.component';
 
 @Component({
   selector: 'app-hospitals',
@@ -25,12 +26,14 @@ export class HospitalsComponent implements OnInit {
   path:any;
   i:number=0;
   imgpath:any;
+  pageOfItems: Array<any>;
 
   ngOnInit() {
 
     this.Hospitals= this.hospitalService.getCategories();
     this.Diseases = this.diseaseservice.getCategories();
-  
+    
+
     this.myStyle = {
       'position': 'absolute',
       'width': '100%',
@@ -66,6 +69,15 @@ export class HospitalsComponent implements OnInit {
     };
 
   }
+  // @Input () collectionSize=10;
+
+  // @Input () page= 4;
+  // @Input () pageSize: Number;
 
 
+
+ 
 }
+
+
+

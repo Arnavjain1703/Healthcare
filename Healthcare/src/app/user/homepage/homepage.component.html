@@ -1,98 +1,116 @@
 
-<style>
-    @import url('https://fonts.googleapis.com/css?family=Montserrat|Poppins|Roboto&display=swap');
-</style>
-<section (scroll)="onWindowScroll($event);">
-    <div class="container-fluid section1">
-        <particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mx-auto text">
-                <img src="assets/images/wheel.png" class="rotate" alt="wheel">
-                <img src="assets/images/wheel2.png" class="rotate" alt="wheel">
-                <h2>
-                    Health<span style="color:#3FB0AC;">Care</span>
-                    <span style="color:black;"> lets you work more collaboratively and get more done.</span>
-                </h2>
-                <h3>
-                    TaskR's boards, lists, and cards enable you to organize and prioritize your projects in a fun,
-                    flexible, and rewarding way.
-                </h3>
-                <div class="box1"></div>
-                <div class="box"></div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mx-auto vector">
-                <img src="/assets/doctor.svg" class="img-fluid" alt="TaskR">
-            </div>
-        </div>
+
+<img class="image1" src="/assets/images/Home.png">
+<div class="row background2">
+
+<div class="col-md-6 center padding">
+
+    <div class="box">
+        <div class="heading1"> FIND YOUR SPECILIST</div>
+        <div class="heading2">Now its so easy to find your specilist</div>
     </div>
-    <div class="section2">
-        <div class="container">
-            <h2>TaskR your way</h2>
-            <h4>
-                Use TaskR the way your team works best. We’ve got the flexibility & features to fit your style.
-            </h4>
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mx-auto">
-                    <img src="assets/images/homesec2part1.svg" class="img-fluid" alt="team">
-                    <h3 class="text-center" style="color:black;">Work Efficiently</h3>
-                    <h6 class="text-center" style="color:black;">
-                        Increase productivity and become highly efficient with your work
-                    </h6>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mx-auto">
-                    <img src="assets/images/homesec2part2.png" class="img-fluid" style="margin-bottom:3rem;" alt="productive">
-                    <h3 class="text-center" style="color:black;">A Productivity Platform</h3>
-                    <h6 class="text-center" style="color:black;">
-                        Provides a platform for better productivity and efficient work flow
-                    </h6>
+</div>
+
+<div class="col-md-6 center ">
+
+    <img class="image" src="/assets/images/part2.png">
+</div>
+
+</div>
+
+<div>
+
+<div class="center padding-3">
+
+    <div class="heading2 ">
+        OWNING A HOSPITAL ?
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 center padding">
+            <div class="box">
+                <div class="heading1"> Let patients reach you first.
+                    Register your hospital and
+                    let us do the rest of the job.</div>
+                <div class="center" >
+
+ 
+                        <button routerLink='/doctor/{{index}}' class="btn">Register Now</button>                
+
+                           
+
                 </div>
             </div>
         </div>
-    </div>
-    <div class="section3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12 mx-auto">
-                    <div class="contentbox">
-                        <h2 class="text-center" style="color:#173E43;"><b>What is Task Management ?</b></h2>
-                        <h6 style="margin-top:3rem;">
-                            Task management is the process of managing a task through its life cycle. 
-                            It involves planning, testing, tracking, and reporting. 
-                            Task management can help either individual achieve goals, or groups of individuals collaborate and share knowledge 
-                            for the accomplishment of collective goals. 
-                            Tasks are also differentiated by complexity, from low to high.
-                        </h6>
-                        <h6 style="margin-top:3rem;">
-                            Task management may form part of project management and process management and can serve as the foundation 
-                            for efficient workflow in an organization. 
-                            Project managers adhering to task-oriented management have a detailed and up-to-date project schedule, 
-                            and are usually good at directing team members and moving the project forward.
-                        </h6>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 mx-auto">
-                    <div class="work"></div>
-                    <img src="assets/images/homesec3.svg" class="img-fluid" alt="work">
-                </div>
-            </div>
+
+        <div class="col-md-6 center">
+         
+            <img class="image" src="/assets/images/ownhospital.png">
         </div>
     </div>
-    <div class="section4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12 mx-auto">
-                    <img src="assets/images/homesec4(full).svg" class="img-fluid" alt="info">
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 mx-auto">
-                    <div class="contentbox2">
-                            <h2 class="text-center" style="color:#173E43;"><b>Information at a glance</b></h2>
-                            <h6 style="margin-top:3rem;">
-                                Dive into the details by adding comments, attachments, due dates, 
-                                and more directly to Trello cards. Collaborate on projects from beginning to end.
-                            </h6>
-                    </div>
-                </div>
+</div>
+
+
+</div>
+
+<div>
+
+    <div class="row">
+
+        <div class="col-md-6 center">
+            <img class="image" src="/assets/images/hospital.png">
+        </div>
+
+        <div class="col-md-6 center padding">
+            <div class="box">
+                <div class="heading1"> FIND HOSPITALS NEAR YOU</div>
+                <div class="heading2">Easily search among nearby hospitals
+                    and get to know about the specialist
+                    and facilities provided by the hospital</div>
             </div>
         </div>
+
+
+
     </div>
-</section>
+
+
+
+</div>
+<div class="row background height">
+
+    <div class="col-md-6 center padding">
+    
+        <div class="box">
+            <div class="heading1"> GET THE FASTEST SERVICE</div>
+            <div class="heading2">Get the fastest service by locating the
+                most nearest hospital and the 
+                specialist available there.</div>
+        </div>
+    </div>
+    
+    <div class="col-md-6 center ">
+    
+        <img class="image" src="/assets/images/nearby.png">
+    </div>
+    
+    </div>
+
+    <div class="row background2">
+
+        <div class="col-md-6 center">
+            <img class="image" src="/assets/images/appointment.png">
+        </div>
+
+        <div class="col-md-6 center padding">
+            <div class="box">
+                <div class="heading1">GET THE APPOINTMENT</div>
+                <div class="heading2">Get the appointment according to 
+                    your convenience and to your
+                    preferred specialist at hospital.</div>
+            </div>
+        </div>
+
+
+
+    </div>
