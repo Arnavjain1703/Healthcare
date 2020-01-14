@@ -11,6 +11,7 @@ export class HospitalItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
    
   @Input () Hospital:Hospital  ;

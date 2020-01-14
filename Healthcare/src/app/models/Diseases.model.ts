@@ -1,7 +1,7 @@
 export class Diseases
 {
  
-   Disease_Name :String;
+   type :String;
    Id:number;
     
 
@@ -10,7 +10,7 @@ export class Diseases
 constructor(Disease_Name:String , Id:number)
 {
     
-    this.Disease_Name = Disease_Name;
+    this.type = Disease_Name;
     this.Id = Id
 }
 

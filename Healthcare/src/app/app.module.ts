@@ -52,7 +52,7 @@ import { DoctorService } from './services/Doctorservice';
     
   
   ],
-  providers: [ServerService,HospitalService,DiseaseService,DoctorService],
+  providers: [ServerService,HospitalService,DiseaseService,DoctorService,HospitalsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

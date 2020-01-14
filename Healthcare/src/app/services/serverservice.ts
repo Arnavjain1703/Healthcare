@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
 
 
 @Injectable()
@@ -7,7 +8,7 @@ export class ServerService
 {
 
 
-private rootUrl="https://05ffcc04.ngrok.io";
+private rootUrl="https://378f7f8b.ngrok.io";
 
 
 constructor( 
@@ -50,6 +51,14 @@ verifyUser(otp:number, id:number)
     console.log(this.rootUrl+'/validateotp/'+id+'/');
     return this.http.post(this.rootUrl+'/validateotp/'+id+'/',JSON.stringify({otp}),{headers:headers})  
 }
+getDiseases()
+{   
+
+  console.log(this.rootUrl+'specialization/');
+   return this.http.get(this.rootUrl+'/specialization/');
+
+}
+
 
 
 loggedIn()

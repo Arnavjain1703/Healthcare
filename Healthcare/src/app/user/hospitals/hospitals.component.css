@@ -1,12 +1,43 @@
 
 
 
+.search
+{
+     text-align:center;
+}
+.heading
+{
+
+    background:black;
+}
+
+.Heading{
+   color: #8BC23A;
+   text-align:center;
+   font-size: 200%;
+   font-family: 'Montserrat', sans-serif;
+   margin: 3% 1%;
+   letter-spacing: 2px;
+   font-weight:900;
+   
+
+
+}
+
+.name
+{
+    color:#048739;
+    
+}
 .height
 {
-    /* height:100vh; */
-    background: url('/assets/images/back.svg');
+    background-size:cover ;
+    background: url('/assets/images/hospitalbackground2.png');
     background-repeat:no-repeat;
-}
+    background-position :center;
+    padding-bottom: 20%;
+    
+}   
 
 .col-sm-6
 {

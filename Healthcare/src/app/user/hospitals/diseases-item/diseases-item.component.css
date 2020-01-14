@@ -1,4 +1,4 @@
-.padding
+/* .padding
 {
    padding: 10px;
 
@@ -45,4 +45,28 @@
       width: 110px;
       height:110px;
     }   
+  } */
+
+  .width
+  {
+    margin:20px;
+    text-align:center;
+    padding:1% 3%;
+    border:2px solid;
+    background:  white;
+    border:   1px solid #8BC23A ;
+    color:#048739;
+    border-radius: 50px 50px;   
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+   
+     
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+     transition: box-shadow 0.3s;
   }
+  
+  .width:hover{
+
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+   

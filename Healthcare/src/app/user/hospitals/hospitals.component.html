@@ -1,49 +1,29 @@
 <div class="back">
 <div class="height padding">
+<div class="search">
 
-
-    <div class="row">
-
-        <div  class=" col-sm-0 col-md-1 col-lg-2"></div>
-
-        <div class="col-sm-6 col-md-5 col-lg-4 center">
-         
-            <img class="image" src ="/assets/images/doctor.svg">
-     
-        </div>
-        
-        
-        
-        <div class="col-sm-6 col-md-5 col-lg-4 ">
-     
-            <div class="para"> 
-                
-       
-                   Hii! Arnav  Here Are Some Diseases Healps you to Search Your Preffered Hospital And Doctors
-       
     
-            </div>
-     
-        </div>
+      <select>
+        <option value="volvo">L0cation</option>
+        <option value="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>
+       </select>
+       <span class="heading">
+            
+        Search Your Preffered Location
+    
+       </span>
 
-        <div  class=" col-sm-0 col-md-1 col-lg-2"></div>
 
-     
-      </div>
+</div>
+</div>
 
- <particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
-
- <div class=""></div>
-
+<div class=" Heading">  Search Hospital According to Your Need  </div>
  <div class="row ">
-     <div class=" col-lg-3 col-sm-1 ">
-
-
-
-     </div>
-     <div class="col-lg-7 col-sm-10 ">
-         <div class="row">
+     <div class="col-lg-1"></div>
         
+     <div class="col-lg-11">
             <app-diseases-item 
             *ngFor = " let Disease of Diseases"
 
@@ -52,29 +32,22 @@
 
 
             </app-diseases-item>
-          
+          </div>
 
-           
-         </div>
-     </div>
+      
 
-     
-     <div class=" col-lg-3 col-sm-1 ">
-
-     </div>
+    
  </div>
+
+ <div class=" Heading"> Hospitals  <span class="name"> {{disease}}   {{location}} </span> </div>
+
 
 
  
 
 
 
-<div class="center heading">
 
-    Hospitals Having  Facilities to Cure Diseases
-
-
-</div>
 
 
 <div class="row" >
@@ -92,10 +65,7 @@
 
     </app-hospital-item>
 
-    <!-- <ngb-pagination
-  [(page)]="page"
-  [pageSize]="pageSize"
-  [collectionSize]="Hospitals.length"></ngb-pagination> -->
+   
 
 
 </div>

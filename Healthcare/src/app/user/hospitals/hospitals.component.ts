@@ -4,6 +4,8 @@ import { Hospital } from 'src/app/models/hospital.model';
 import { DiseaseService } from 'src/app/services/DiseasesService';
 import { Diseases } from 'src/app/models/Diseases.model';
 import { HospitalItemComponent } from './hospital-item/hospital-item.component';
+import { Subscription } from 'rxjs';
+import { ServerService } from 'src/app/services/serverService';
 
 @Component({
   selector: 'app-hospitals',
@@ -16,7 +18,8 @@ export class HospitalsComponent implements OnInit {
   Diseases:Diseases[];
 
   constructor( private hospitalService:HospitalService,
-               private diseaseservice:DiseaseService
+               private diseaseservice:DiseaseService,
+               public serverService:ServerService
             ) { }
   
   myStyle: object = {};
@@ -27,54 +30,53 @@ export class HospitalsComponent implements OnInit {
   i:number=0;
   imgpath:any;
   pageOfItems: Array<any>;
+  DiseaseSubscription:Subscription;
+  tk:any;
+  disease:any;
+  location:any;
 
   ngOnInit() {
 
+    // getting diseases
+
+     this.serverService.getDiseases()
+     .subscribe
+     (
+       response =>
+       {
+         console.log(response);
+         this.tk=response;
+         this.diseaseservice.setService(this.tk);
+         
+       }
+     )
+
+     
+
+
+
+    this.DiseaseSubscription=this.diseaseservice.DiseaseChanged
+    .subscribe((Diseases:Diseases[])=>
+    {
+      this.Diseases=Diseases
+    }
+    )
     this.Hospitals= this.hospitalService.getCategories();
     this.Diseases = this.diseaseservice.getCategories();
     
 
-    this.myStyle = {
-      'position': 'absolute',
-      'width': '100%',
-      'height': '100vh',
-      'z-index': -1,
-      'top': 0,
-      'left': 0,
-      'right': 0,
-      'bottom': 0,
-    };
-
-    this.myParams = {
-      particles: {
-          number: {
-              value: 80,
-          },
-          color: {
-              value: '#58D68D',
-          },
-          shape: {
-              polygon: {
-                "nb_sides": 5
-              },
-          },
-          line_linked: {
-            "enable": true,
-            "distance": 150,
-            "color": "#58D68D",
-            "opacity": 0.5,
-            "width": 2
-          },
-      }
-    };
 
   }
-  // @Input () collectionSize=10;
-
-  // @Input () page= 4;
-  // @Input () pageSize: Number;
-
-
+ 
+   diseaseHeading(disease:string)
+   {   
+     
+      this.disease = 'for '+ disease;
+   }
+    locationHeading(location:string)
+    {
+      this.location= 'at ' + location;
+    }
 
  
 }

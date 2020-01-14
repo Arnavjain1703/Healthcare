@@ -28,4 +28,10 @@ export class DiseaseService
 
         return this.Disease.slice();
     }
+
+    setService(Diseases:Diseases[])
+    {
+        this.Disease = Diseases;
+        this.DiseaseChanged.next(this.Disease.slice())
+    }
 }

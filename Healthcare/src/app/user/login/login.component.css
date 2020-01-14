@@ -2,7 +2,7 @@ input.ng-invalid.ng-touched {
     border : 2px solid red;
 }
 input {
-    border-left: 3px solid #3FB0AC;
+    border-left: 3px solid #8BC23A;
     width:100%;
 }
 /* Loader */
@@ -12,6 +12,9 @@ input {
     width:100%;
     background:rgba(0,0,0,0.5);
     z-index:2;
+}
+.center{
+    text-align: center;
 }
 .loader {
     width:100px;
@@ -25,8 +28,8 @@ input {
 .loader-circle {
     width:calc(100% - 0.000001px);
     height:calc(100% - 0.000001px);
-    border:8px solid #173E43;
-    border-top:8px solid #3FB0AC;
+    border:8px solid #8BC23A;
+    border-top:8px solid #8BC23A;
     border-radius:50%;
     animation:rotate 5s linear infinite;
 }
@@ -35,16 +38,19 @@ input {
 }
 /* Loader */
 .all {
-    background:url();
-    background-size:100% auto;
+    background:url('/assets/images/loginbackground.svg');
+    background-size:cover;
     background-repeat:no-repeat;
-    margin-bottom:10rem;
+    
+    
+
 }
 .box {
     width:100%;
     margin-top:7rem;
     border-radius: 10px;
-    border-bottom: 5px solid #173E43;
+    border-bottom: 5px solid #048739;
+    margin-bottom: 50%;
     
 }
 .head {
@@ -64,7 +70,7 @@ input {
     padding : 8px 25px;
     border : 0px;
     letter-spacing:0.8px;
-    background-image: linear-gradient(to right, #173E43 , #3FB0AC);
+    background-image: linear-gradient(to right,#048739 , #8BC23A);
     color : #FFFFFF;
     border-radius : 2px;
 }
