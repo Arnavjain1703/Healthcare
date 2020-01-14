@@ -24,6 +24,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DoctorsComponent } from './user/doctors/doctors.component';
 import { DoctorItemComponent } from './user/doctors/doctor-item/doctor-item.component';
 import { DoctorService } from './services/Doctorservice';
+import { LocationService } from './services/location.service';
+import { ChangeService } from './services/changeService';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,7 @@ import { DoctorService } from './services/Doctorservice';
     DiseasesItemComponent,
     JwPaginationComponent,
     DoctorsComponent,
-    DoctorItemComponent
+    DoctorItemComponent,
 
   ],
   imports: [
@@ -52,7 +54,8 @@ import { DoctorService } from './services/Doctorservice';
     
   
   ],
-  providers: [ServerService,HospitalService,DiseaseService,DoctorService,HospitalsComponent],
+  providers: [ServerService,HospitalService,DiseaseService,DoctorService,HospitalsComponent,LocationService,HospitalItemComponent
+  , ChangeService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

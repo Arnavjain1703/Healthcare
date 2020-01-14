@@ -6,6 +6,8 @@ import { Diseases } from 'src/app/models/Diseases.model';
 import { HospitalItemComponent } from './hospital-item/hospital-item.component';
 import { Subscription } from 'rxjs';
 import { ServerService } from 'src/app/services/serverService';
+import { LocationService } from 'src/app/services/location.service';
+import { ChangeService } from 'src/app/services/changeService';
 
 @Component({
   selector: 'app-hospitals',
@@ -19,7 +21,9 @@ export class HospitalsComponent implements OnInit {
 
   constructor( private hospitalService:HospitalService,
                private diseaseservice:DiseaseService,
-               public serverService:ServerService
+               public serverService:ServerService,
+               private locationService:LocationService,
+               private changeService:ChangeService
             ) { }
   
   myStyle: object = {};
@@ -34,7 +38,8 @@ export class HospitalsComponent implements OnInit {
   tk:any;
   disease:any;
   location:any;
-
+  Locations:String[];
+   show = false;
   ngOnInit() {
 
     // getting diseases
@@ -47,9 +52,12 @@ export class HospitalsComponent implements OnInit {
          console.log(response);
          this.tk=response;
          this.diseaseservice.setService(this.tk);
+
          
        }
      )
+
+
 
      
 
@@ -63,7 +71,7 @@ export class HospitalsComponent implements OnInit {
     )
     this.Hospitals= this.hospitalService.getCategories();
     this.Diseases = this.diseaseservice.getCategories();
-    
+    this.Locations = this.locationService.getCategories();
 
 
   }
@@ -75,9 +83,17 @@ export class HospitalsComponent implements OnInit {
    }
     locationHeading(location:string)
     {
+      
       this.location= 'at ' + location;
+       this.changeService.changeLocation(location);
+
     }
 
+    click()
+    {
+      this.show = !this.show
+
+    }
  
 }
 

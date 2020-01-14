@@ -13,7 +13,7 @@ export class HospitalService
      
        new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar'),
 
-       new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar'),
+       new Hospital ('/assets/images/hospital.jpg','Meerut','Kavita Nagar'),
        new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar'),
        new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar'),
        new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar'),
