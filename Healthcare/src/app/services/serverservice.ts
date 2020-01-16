@@ -8,7 +8,7 @@ export class ServerService
 {
 
 
-private rootUrl="https://378f7f8b.ngrok.io";
+public rootUrl="https://d9f1bc59.ngrok.io";
 
 
 constructor( 
@@ -59,6 +59,26 @@ getDiseases()
 
 }
 
+getHospital(id:Number)
+{
+   return this.http.get(this.rootUrl+'/quickstart/category/'+id+'/' );
+   console.log(id)
+
+}
+
+appoinmentDoctor(email:string,contact:number,age:number,description:String,doctor_name,hospital_name)
+{
+  const headers = new HttpHeaders({'Content-Type':'application/json'});
+ console.log(JSON.stringify({email,contact,age,description,doctor_name,hospital_name}));
+ console.log(this.rootUrl+'/quickstart/make_appoinment/')
+ return this.http.post(this.rootUrl+'/quickstart/make_appoinment/',JSON.stringify({email,contact,age,description,doctor_name,hospital_name}),{headers:headers})
+
+  
+}
+getdoctors(id:Number)
+{
+  return this.http.get(this.rootUrl+'/quickstart/hospital_doctor/'+id+'/')
+}
 
 
 loggedIn()

@@ -11,14 +11,30 @@ export class HospitalService
     private Hospitals:Hospital[] = 
     [
      
-       new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar'),
+       new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
+         'we provide a good facility to all our patients' ),
+         new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
+         'we provide a good facility to all our patients' ),
+         new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
+         'we provide a good facility to all our patients' ),
+         new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
+         'we provide a good facility to all our patients' ),
+         new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
+         'we provide a good facility to all our patients' ),
+         new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
+         'we provide a good facility to all our patients' ),
+         new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
+         'we provide a good facility to all our patients' ),
+         new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
+         'we provide a good facility to all our patients' ),
+         new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
+         'we provide a good facility to all our patients' ),
+         new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
+         'we provide a good facility to all our patients' ),
+         new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
+         'we provide a good facility to all our patients' ),
 
-       new Hospital ('/assets/images/hospital.jpg','Meerut','Kavita Nagar'),
-       new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar'),
-       new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar'),
-       new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar'),
-       new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar'),
-       new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar'),
+   
 
 
        
@@ -30,5 +46,15 @@ export class HospitalService
     {
 
         return this.Hospitals.slice();
+    }
+
+    gethospital(id:number)
+    {
+        return this.Hospitals[id];
+    }
+    SetService(Hospitals:Hospital[])
+    {
+       this.Hospitals = Hospitals;
+       this.HospitalChanged.next(this.Hospitals.slice())
     }
 }

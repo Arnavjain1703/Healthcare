@@ -1,20 +1,20 @@
-<div *ngIf=" show ||Location == Hospital.location">
+<div *ngIf=" show ||Location == Hospital.city">
 <div class="col-xs-3 background padding">
     
       <div class="shadow">
 
-              <img class="image" src ="{{Hospital.image}}">
+              <img class="image" src ="{{image}}">
             
               <div class="font">
 
 
-               <div> <span> Hospital Name : </span> <span> {{Hospital.name}} </span></div>
+               <div> <span> Hospital Name : </span> <span> {{Hospital.hospital_name}} </span></div>
                 
-               <div> <span> Hospital Location :</span><span> {{Hospital.location}}</span>  </div>
+               <div> <span> Hospital Location :</span><span> {{Hospital.city}}</span>  </div>
 
                <div class="button center">
  
-                        <button routerLink='/doctor/{{index}}' class="btn">Apply for Appointment</button>                
+                        <button (click)="getDoctors()" class="btn"> View Profile</button>                
 
                </div>
             

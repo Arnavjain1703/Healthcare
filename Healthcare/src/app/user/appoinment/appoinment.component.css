@@ -1,0 +1,61 @@
+input.ng-invalid.ng-touched {
+    border : 2px solid red;
+}
+textarea.ng-invalid.ng-touched{
+    border : 2px solid red;
+
+}
+input {
+    border-left: 5px solid #048739;
+    
+}
+.mybutton {
+    /* margin:1rem 10rem; */
+    padding : 8px 25px;
+    border : 0px;
+    letter-spacing:0.8px;
+    background-image: linear-gradient(to right,#048739 , #8BC23A);
+    color : #FFFFFF;
+    border-radius : 2px;
+}
+.mybutton:hover {
+    box-shadow: 2px 2px 18px 5px rgba(0,0,0,0.1);
+    transition:0.2s;
+}
+.mybutton:focus {
+    outline:none;
+}
+.label
+{
+    color:#048739;
+    font-size:120%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.padding
+{
+  padding:3% 5%;
+     
+}
+.shadow
+{   padding:3% 5%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 3%;
+}
+.message
+{
+    height:150px;
+    width:100%;
+    border-radius:2%;
+
+}
+.center
+{
+    text-align: center;
+    color: #048739;
+    font-size:120%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    letter-spacing: 2px;
+}

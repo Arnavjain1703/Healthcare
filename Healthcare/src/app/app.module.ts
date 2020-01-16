@@ -26,6 +26,8 @@ import { DoctorItemComponent } from './user/doctors/doctor-item/doctor-item.comp
 import { DoctorService } from './services/Doctorservice';
 import { LocationService } from './services/location.service';
 import { ChangeService } from './services/changeService';
+import { ProfileComponent } from './user/doctors/profile/profile.component';
+import { AppoinmentComponent } from './user/appoinment/appoinment.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { ChangeService } from './services/changeService';
     JwPaginationComponent,
     DoctorsComponent,
     DoctorItemComponent,
+    ProfileComponent,
+    AppoinmentComponent,
 
   ],
   imports: [
@@ -55,7 +59,7 @@ import { ChangeService } from './services/changeService';
   
   ],
   providers: [ServerService,HospitalService,DiseaseService,DoctorService,HospitalsComponent,LocationService,HospitalItemComponent
-  , ChangeService ],
+  , ChangeService,AppComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

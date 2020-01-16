@@ -2,18 +2,18 @@ export class Doctor
 {
     image:String;
     name:String;
-    description:String;
-    specility:String;
-
+    Description:String;
+    Specialization:String;
+    id:number
 
 
 
 constructor( image:String ,name:String,description:String,specility:String)
 {
      this.image=image;
-     this.description=description;
+     this.Description=description;
      this.name=name;
-     this.specility=specility
+     this.Specialization=specility
 
 
 }

@@ -1,2 +1,15 @@
  <app-header></app-header>
+ <div *ngIf="load || false" class="background">
+    <div class="loader">
+        <div class="loader-circle">
+            <div class="loader-circle">
+                <div class="loader-circle">
+                    <div class="loader-circle">
+                        <div class="loader-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <router-outlet></router-outlet>

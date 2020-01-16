@@ -1,19 +1,67 @@
-<div class="background" >
+<div class="back2">
 
+
+
+ <div class="background " >
+
+    <div class="row">
+   <div class="col-lg-1"></div>
+   
+   <div class="col-lg-5 center">
+  <img class="image"src = "{{image}}">
+   </div>
+
+   <!-- <div class="col-lg-1"></div> -->
+   <div class="col-lg-4 ">
      
+    <div class="details padding back" >
+      <div class="detail"> <span class="name"> Hospital Name  </span>: {{Hospital.hospital_name}} </div>
+      <div class="detail"> <span class="name">  Address  </span>: {{Hospital.street_name}}</div>
+      <div class="detail"> <span class="name">  Email </span>:{{Hospital.email}}</div>
+      <div class="detail">  <span class="name">  contact number </span> :{{Hospital.contact}}</div>
+      <div class="width" routerLink = "/appointment"> Apply for Appoinment</div>
+      
+ 
+   </div>
+   </div>
+     <div class="col-lg-2"></div> 
+    </div>
+
+ </div> 
+     
+ <div class="">
+     
+    <div class="row margin">
+        <div class="col-sm-3">
+
+        </div>
+        <div class="col-lg-2">
+          <img class="image2" src="/assets/images/appointment.png">
+        </div>
+        <div class="col-lg-5  center">
+            <div class="sentence">
+            Get appointment with Doctor Of Your Preference
+           </div>         
+        </div>
+        <div class=" col-lg-2">
+
+        </div>
+    </div>
+
 </div>
 
-<div class="">
-    
-</div>
+
 
 <div class ="row">
 
 <app-doctor-item
      
-*ngFor="let item of  Doctors" 
+*ngFor="let item of  Doctors, let l = index" 
  
 [Doctor]="item"
+[index] = l
+ [id]=id
 
 ></app-doctor-item>
+</div>
 </div>

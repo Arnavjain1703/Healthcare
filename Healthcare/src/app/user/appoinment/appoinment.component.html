@@ -1,0 +1,100 @@
+
+<div class="row">
+    <div class="col-lg-6">
+           <img src="/assets/images/appoinment.svg">
+    </div>
+    <div class="col-lg-6 padding">
+        <div class="shadow">
+            <div class="center">Please fIll the following Details</div>
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    
+                <div class="form-group">
+                    <label class="label" for="password">Age</label>
+                    <input 
+                    placeholder = "our Age"
+                    type="number" 
+                    id="age" 
+                    name="age" 
+                    ngModel 
+                    class="form-control" 
+                    required
+                     pattern = "^(0?[1-9]|[1-9][0-9]|[1][1-9][1-9]|200)$"
+    
+                    
+                    #age="ngModel">
+                    <span
+                    class="help-block"
+                    *ngIf="!age.valid && age.touched"
+                    style="color:red;">Please Enter correct age</span>
+                </div>
+                 
+                <div class="form-group">
+                   <label class="label">Gender</label>
+                  <div class="radio" >  <input (click)="click()" type=radio value = "mail" name ="gender" requied ngModel #gender="ngModel"> <label>Male</label></div>
+                  <div class="radio">     <input (click)="click()" type=radio value = "Female" name ="gender" requied ngModel #gender="ngModel"><label>Female</label></div>
+                  <div class="radio">   <input  (click)="click()" type=radio value = "Others" name ="gender" requied ngModel #gender="ngModel"><label>Others</label></div>
+
+                    <span
+                    class="help-block"
+                    *ngIf="!gender.valid && gender.touched"
+                    style="color:red;">Please Enter correct age</span>
+                </div>
+
+ 
+                 <div class="form-group">
+                <label class="label" for="email">Email</label>
+                <input 
+                placeholder = "e.g.(abc@xyz.com)"
+                type="email"
+                id="email" 
+                name="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                ngModel
+                class="form-control" 
+                required
+                #email="ngModel">
+                <span 
+                class="help-block"
+                *ngIf="!email.valid && email.touched"
+                style="color:red;">Enter a valid Email</span>
+            </div>
+            <div class="form-group">
+                <label class="label" for="email">Problem</label>
+
+                <textarea class="message" name="description"  requied
+                 ngModel
+                  #message="ngModel" >
+                </textarea>
+                    
+                
+                <span 
+                class="help-block"
+                *ngIf="!message.valid && message.touched"
+                style="color:red;">Please Enter Your Problem Details</span>
+            </div>
+            <div class="form-group">
+                <label class="label" for="password">Contact Number</label>
+                <input 
+                placeholder = "**********"
+                type="number" 
+                id="contact" 
+                name="contact" 
+                ngModel 
+                class="form-control" 
+                required
+                pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$"
+
+                
+                #Contact_number="ngModel">
+                <span
+                class="help-block"
+                *ngIf="!Contact_number.valid && Contact_number.touched"
+                style="color:red;">Please Enter Valid Number</span>
+            </div>
+            <div class="center">
+            <button type="submit" class="btn mybutton" [disabled]="!f.valid && !radio">Apply</button>
+            </div>
+        </form>
+    </div>
+ </div>
+</div>

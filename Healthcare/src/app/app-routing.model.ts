@@ -6,6 +6,8 @@ import { VerificationComponent } from './user/verification/verification.componen
 import { HomepageComponent } from './user/homepage/homepage.component';
 import { HospitalsComponent } from './user/hospitals/hospitals.component';
 import { DoctorsComponent } from './user/doctors/doctors.component';
+import { ProfileComponent } from './user/doctors/profile/profile.component';
+import { AppoinmentComponent } from './user/appoinment/appoinment.component';
 
 
 const appRoutes: Routes=[
@@ -15,7 +17,10 @@ const appRoutes: Routes=[
     {path:'verification/:id',component:VerificationComponent},
     {path:'frontpage',component:HomepageComponent},
     {path:'hospital',component:HospitalsComponent},
-    {path:'doctor/:id',component:DoctorsComponent}
+    {path:'doctor/:id',component:DoctorsComponent},
+    {path:'profile/:id/:id2',component:ProfileComponent},
+    {path:'appoinment',component:AppoinmentComponent},
+    {path:'appoinment/:id/:id2',component:AppoinmentComponent},
 
     
 ]

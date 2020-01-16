@@ -25,5 +25,15 @@ export class DoctorService
     {
         return this.Doctors
     }
+    
+    getdoctor(id:number)
+    {
+        return this.Doctors[id];
+    }
+    SetDoctors(Doctor:Doctor[])
+    {
+       this.Doctors = Doctor;
+       this.DoctorChanged.next(this.Doctors.slice())
+    }
 
 }

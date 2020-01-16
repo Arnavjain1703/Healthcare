@@ -8,6 +8,7 @@ import { Subscription } from 'rxjs';
 import { ServerService } from 'src/app/services/serverService';
 import { LocationService } from 'src/app/services/location.service';
 import { ChangeService } from 'src/app/services/changeService';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-hospitals',
@@ -23,7 +24,8 @@ export class HospitalsComponent implements OnInit {
                private diseaseservice:DiseaseService,
                public serverService:ServerService,
                private locationService:LocationService,
-               private changeService:ChangeService
+               private changeService:ChangeService,
+               private appComponent:AppComponent
             ) { }
   
   myStyle: object = {};
@@ -35,6 +37,7 @@ export class HospitalsComponent implements OnInit {
   imgpath:any;
   pageOfItems: Array<any>;
   DiseaseSubscription:Subscription;
+  HospitalSubscription:Subscription;
   tk:any;
   disease:any;
   location:any;
@@ -42,22 +45,28 @@ export class HospitalsComponent implements OnInit {
    show = false;
   ngOnInit() {
 
-    // getting diseases
+    this.appComponent.loaderOn()
+    
 
      this.serverService.getDiseases()
      .subscribe
      (
        response =>
        {
+         this.appComponent.loaderOff();
          console.log(response);
          this.tk=response;
          this.diseaseservice.setService(this.tk);
 
          
        }
+       ,
+       error=> 
+       {
+         this.appComponent.loaderOff();
+       }
+
      )
-
-
 
      
 
@@ -67,6 +76,13 @@ export class HospitalsComponent implements OnInit {
     .subscribe((Diseases:Diseases[])=>
     {
       this.Diseases=Diseases
+    }
+    )
+
+    this.HospitalSubscription=this.hospitalService.HospitalChanged
+    .subscribe((Hospitals:Hospital[]) =>
+    {
+       this.Hospitals=Hospitals 
     }
     )
     this.Hospitals= this.hospitalService.getCategories();

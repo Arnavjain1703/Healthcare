@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Healthcare';
+  load:boolean;
+
+
+   loaderOn()
+   {
+     this.load = true;
+     console.log(this.load)
+   }
+
+   loaderOff()
+   {
+     this.load = false;
+     console.log(this.load)
+
+   }
+
 }
