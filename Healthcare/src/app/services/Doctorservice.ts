@@ -9,13 +9,13 @@ export class DoctorService
     private Doctors:Doctor[] = 
     [
 
-         new Doctor('/assets/images/doctor.jpg','Arnav jain' , 'Arnav is a professional theripits has an experoence of 20 years and operated a lot of tipical operation successfully','Theripist'),
-         new Doctor('/assets/images/doctor.jpg','Arnav jain' , 'Arnav is a professional theripits has an experoence of 20 years and operated a lot of tipical operation successfully','Theripist'),
-         new Doctor('/assets/images/doctor.jpg','Arnav jain' , 'Arnav is a professional theripits has an experoence of 20 years and operated a lot of tipical operation successfully','Theripist'),
-         new Doctor('/assets/images/doctor.jpg','Arnav jain' , 'Arnav is a professional theripits has an experoence of 20 years and operated a lot of tipical operation successfully','Theripist'),
-         new Doctor('/assets/images/doctor.jpg','Arnav jain' , 'Arnav is a professional theripits has an experoence of 20 years and operated a lot of tipical operation successfully','Theripist'),
-         new Doctor('/assets/images/doctor.jpg','Arnav jain' , 'Arnav is a professional theripits has an experoence of 20 years and operated a lot of tipical operation successfully','Theripist'),
-         new Doctor('/assets/images/doctor.jpg','Arnav jain' , 'Arnav is a professional theripits has an experoence of 20 years and operated a lot of tipical operation successfully','Theripist'),
+         new Doctor('/assets/images/doctor.jpg','Arnav jain' , 'Arnav is a professional theripits has an experoence of 20 years and operated a lot of tipical operation successfully',2),
+         new Doctor('/assets/images/doctor.jpg','Arnav jain' , 'Arnav is a professional theripits has an experoence of 20 years and operated a lot of tipical operation successfully',2),
+         new Doctor('/assets/images/doctor.jpg','Arnav jain' , 'Arnav is a professional theripits has an experoence of 20 years and operated a lot of tipical operation successfully',2),
+         new Doctor('/assets/images/doctor.jpg','Arnav jain' , 'Arnav is a professional theripits has an experoence of 20 years and operated a lot of tipical operation successfully',2),
+         new Doctor('/assets/images/doctor.jpg','Arnav jain' , 'Arnav is a professional theripits has an experoence of 20 years and operated a lot of tipical operation successfully',2),
+         new Doctor('/assets/images/doctor.jpg','Arnav jain' , 'Arnav is a professional theripits has an experoence of 20 years and operated a lot of tipical operation successfully',2),
+         new Doctor('/assets/images/doctor.jpg','Arnav jain' , 'Arnav is a professional theripits has an experoence of 20 years and operated a lot of tipical operation successfully',2),
 
 
 

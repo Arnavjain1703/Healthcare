@@ -1,11 +1,13 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { DiseaseService } from 'src/app/services/DiseasesService';
+
 import { Diseases } from 'src/app/models/Diseases.model';
 import { HospitalsComponent } from '../hospitals.component';
 import { ServerService } from 'src/app/services/serverService';
 import { HospitalService } from 'src/app/services/hospital.service';
-import { AppRoutingModule } from 'src/app/app-routing.model';
+
 import { AppComponent } from 'src/app/app.component';
+import { ChangeService } from 'src/app/services/changeService';
+
 
 @Component({
   selector: 'app-diseases-item',
@@ -15,15 +17,19 @@ import { AppComponent } from 'src/app/app.component';
 export class DiseasesItemComponent implements OnInit {
 
  tk:any;
+ 
   constructor( private hospitalComponent:HospitalsComponent,
                private serverService:ServerService,
                private hospitalService:HospitalService,
-               private appcomponent :AppComponent) { }
+               private appcomponent :AppComponent,
+               private changeService:ChangeService,
+              ) { }
 
   ngOnInit() {
 
-    console.log(this.Disease.id)
+  
   }
+  
   @Input () Disease:Diseases 
 
   disease(disease:string)
@@ -40,6 +46,7 @@ export class DiseasesItemComponent implements OnInit {
          console.log(this.tk);
          this.hospitalService.SetService( this.tk)
           this.appcomponent.loaderOff();
+          this.changeService.changeShow(true);
 
          
        }
@@ -49,6 +56,10 @@ export class DiseasesItemComponent implements OnInit {
          this.appcomponent.loaderOff();
        }
      )
+
+     this.changeService.changeDisease(disease)
+     
+     
   }
 
 }

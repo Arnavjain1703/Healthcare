@@ -1,4 +1,4 @@
-
+<div class="background">
 <div class="row">
     <div class="col-lg-6">
            <img src="/assets/images/appoinment.svg">
@@ -92,9 +92,10 @@
                 style="color:red;">Please Enter Valid Number</span>
             </div>
             <div class="center">
-            <button type="submit" class="btn mybutton" [disabled]="!f.valid && !radio">Apply</button>
+            <button type="submit" class="btn mybutton" [disabled]="!f.valid || !radio">Apply</button>
             </div>
         </form>
     </div>
  </div>
+</div>
 </div>

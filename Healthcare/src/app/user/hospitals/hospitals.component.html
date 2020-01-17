@@ -1,30 +1,6 @@
 <div class="back">
-<div class="height padding">
-<div class="search">
-    
-    <div class="row">
-        <div class="col-lg-4">
-
-        </div>
-        <div class="col-lg-2">
-              
-            <div class="width" (click) = "click()">
-                 Location
-            </div>
-            <div [class.opacity] = "!show">
-            <div    *ngFor = "let Location of Locations  " class="location">
-                 <div class="button" (click) = "locationHeading(Location)" >{{ Location}}</div  >
-            </div>
-            </div>
-        </div>
-         <div class="col-lg-4">
-        <div class="width2">
-           Search  Hospital  with your preffered location
-        </div>
-        </div>
-    </div>
-    </div>
-
+<div class="height ">
+<img class="image3" src="/assets/images/images.png">
 </div>
 </div>
 
@@ -47,6 +23,30 @@
 
     
  </div>
+ <div *ngIf=show2  class="search">
+    
+    <div class="row ">
+        <div class="col-lg-3">
+
+        </div>
+        <div class="col-lg-2">
+              
+            <div class="width" (click) = "click()">
+                 Location
+            </div>
+            <div [class.opacity] = "!show " class="index" >
+            <div    *ngFor = "let Location of Locations  " class="location">
+                 <div class="button" (click) = "locationHeading( Location.location)" >{{ Location.location}}</div  >
+            </div>
+            </div>
+        </div>
+         <div class="col-lg-4">
+        <div class="width2">
+           Search  Hospital  with your preffered location
+        </div>
+        </div>
+    </div>
+    </div>
 
  <div class=" Heading"> Hospitals  <span class="name"> {{disease}}   {{location}} </span> </div>
 

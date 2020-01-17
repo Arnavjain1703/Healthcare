@@ -1,0 +1,6 @@
+<div class="form-group">
+<div    *ngFor = "let city of Locations ; " class="location">
+
+    <input type="radio" ngModel  name="city" #name="ngModel" ><span>{{city.location}}   </span>
+</div>
+</div>

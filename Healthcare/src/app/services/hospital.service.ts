@@ -13,27 +13,19 @@ export class HospitalService
      
        new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
          'we provide a good facility to all our patients' ),
-         new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
+       new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
          'we provide a good facility to all our patients' ),
-         new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
+         new Hospital ('/assets/images/hospital.jpg','Meerut','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
          'we provide a good facility to all our patients' ),
-         new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
+         new Hospital ('/assets/images/hospital.jpg','Delhi','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
          'we provide a good facility to all our patients' ),
-         new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
+         new Hospital ('/assets/images/hospital.jpg','Delhi','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
          'we provide a good facility to all our patients' ),
-         new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
+         new Hospital ('/assets/images/hospital.jpg','Dasna','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
          'we provide a good facility to all our patients' ),
-         new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
-         'we provide a good facility to all our patients' ),
-         new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
-         'we provide a good facility to all our patients' ),
-         new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
-         'we provide a good facility to all our patients' ),
-         new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
-         'we provide a good facility to all our patients' ),
-         new Hospital ('/assets/images/hospital.jpg','Khatauli','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
-         'we provide a good facility to all our patients' ),
-
+         new Hospital ('/assets/images/hospital.jpg','Dasna','Kavita Nagar','Jain KUnj Nagar COlony Khatauli','arnavjainkht@gmail.com', '9412211658',
+         'we provide a good facility to all our patients' ),        
+         
    
 
 

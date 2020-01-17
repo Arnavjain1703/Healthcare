@@ -18,7 +18,7 @@ constructor( image:String,location:String,name:String,address:String,email:Strin
       this.city=location;
       this.street_name=address;
       this.email= email;
-    //   this.description = description;
+    
       this.contact  = contact;
 
 }

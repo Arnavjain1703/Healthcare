@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServerService } from 'src/app/services/serverService';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-header',
@@ -8,9 +9,15 @@ import { ServerService } from 'src/app/services/serverService';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor( public serverservice:ServerService) { }
+  constructor( public serverservice:ServerService,
+                private appCOmponent:AppComponent) { }
 
   ngOnInit() {
+  }
+
+  loader()
+  {
+    this.appCOmponent.loaderOn();
   }
 
 }

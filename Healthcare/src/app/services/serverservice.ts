@@ -8,7 +8,7 @@ export class ServerService
 {
 
 
-public rootUrl="https://d9f1bc59.ngrok.io";
+public rootUrl="https://d380b38d.ngrok.io";
 
 
 constructor( 
@@ -54,7 +54,7 @@ verifyUser(otp:number, id:number)
 getDiseases()
 {   
 
-  console.log(this.rootUrl+'specialization/');
+  console.log(this.rootUrl+'/specialization/');
    return this.http.get(this.rootUrl+'/specialization/');
 
 }
@@ -66,20 +66,29 @@ getHospital(id:Number)
 
 }
 
-appoinmentDoctor(email:string,contact:number,age:number,description:String,doctor_name,hospital_name)
+appoinmentDoctor(email:string,contact:number,age:number,description:String,doctor_name:String,hospital_name:Number)
 {
   const headers = new HttpHeaders({'Content-Type':'application/json'});
  console.log(JSON.stringify({email,contact,age,description,doctor_name,hospital_name}));
- console.log(this.rootUrl+'/quickstart/make_appoinment/')
- return this.http.post(this.rootUrl+'/quickstart/make_appoinment/',JSON.stringify({email,contact,age,description,doctor_name,hospital_name}),{headers:headers})
+ console.log(this.rootUrl+'/quickstart/make_appointment/')
+ return this.http.post(this.rootUrl+'/quickstart/make_appointment/',JSON.stringify({email,contact,age,description,doctor_name,hospital_name}),{headers:headers})
 
   
+}
+
+Specilization()
+{
+    return this.http.get(this.rootUrl+'/speciality/')
 }
 getdoctors(id:Number)
 {
   return this.http.get(this.rootUrl+'/quickstart/hospital_doctor/'+id+'/')
 }
-
+getLocation()
+{
+   return this.http.get(this.rootUrl+'/city/')
+   console.log(this.rootUrl+'/city/')
+}
 
 loggedIn()
 {
@@ -90,4 +99,5 @@ logout()
     localStorage.removeItem('token');
 
   }
+  
 }

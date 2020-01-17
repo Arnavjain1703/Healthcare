@@ -35,8 +35,8 @@ export class LoginComponent implements OnInit {
         this.tk=response;
         console.log(this.tk.token);
         this.load=false;
-        localStorage.setItem('token',this.tk.token)
-        // this.router.navigate['/hospital'];
+        localStorage.setItem('token',this.tk.token);
+        this.router.navigate(['frontpage'])
 
                    },
 

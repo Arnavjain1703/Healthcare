@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { AppComponent } from 'src/app/app.component';
 import { DoctorService } from 'src/app/services/Doctorservice';
+import { City } from 'src/app/models/location.model';
+import { LocationService } from 'src/app/services/location.service';
 
 @Component({
   selector: 'app-hospital-item',
@@ -19,22 +21,33 @@ export class HospitalItemComponent implements OnInit {
                 private severService:ServerService,
                 private  router :Router,
                 private appComponent:AppComponent,
-                private doctorService:DoctorService) { }
+                private doctorService:DoctorService,
+           ) { }
    Location:String;
-   locationSubscription:Subscription;
+   Locations:City[];
+   changelocation:Subscription;
+  locationChanged:Subscription;
    image:String;
     tk:any;
    show=true;
+   route:boolean;
+   ID:String;
   ngOnInit( ) {
+    this.route = this.severService.loggedIn(); 
     this.image = this.severService.rootUrl+this.Hospital.image;
-    this.locationSubscription=this.changeservice.locationChanged
+    this.changelocation=this.changeservice.locationChanged
     .subscribe((location:String)=>
     {
       this.Location=location;
-      console.log(this.Location);
+     
       this.show = false;
     }
     )
+
+  
+    
+    
+
   }
     
 
@@ -46,7 +59,7 @@ getDoctors()
   this.severService.getdoctors( this.Hospital.id )
   .subscribe(
     (response) =>
-    {  this.appComponent.loaderOff()
+    {  
        console.log(response);
        this.tk= response;
         this.doctorService.SetDoctors(this.tk)

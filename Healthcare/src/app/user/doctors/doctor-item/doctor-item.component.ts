@@ -1,9 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Doctor } from 'src/app/models/Doctor.model';
-import { ActivatedRoute, Router } from '@angular/router';
-import { DoctorService } from 'src/app/services/Doctorservice';
+import {  Router } from '@angular/router';
 import { ServerService } from 'src/app/services/serverService';
-import { Hospital } from 'src/app/models/hospital.model';
+import { Subscription } from 'rxjs';
+import { CategoryService } from 'src/app/services/category.service';
+import { Category } from 'src/app/models/categoer.model';
 
 @Component({
   selector: 'app-doctor-item',
@@ -13,11 +14,36 @@ import { Hospital } from 'src/app/models/hospital.model';
 export class DoctorItemComponent implements OnInit {
 
   constructor( private router:Router,
-                private ServerService:ServerService) { }
+                private ServerService:ServerService,
+                private categoryService:CategoryService,
+            ) { }
 
-    image:String;            
-  ngOnInit() {
+    image:String;     
+    CategorySubscription:Subscription  ;
+    categories:Category[]     
+    Category:String
+    Id:number;
+    
+  
+    ngOnInit() {
+   
+     
+   
+      this.CategorySubscription=this.categoryService.categoryChanged
+    .subscribe((categories:Category[]) =>
+    {   
+       this.categories =categories 
+    }
+    )
+
+     
+   
+   
+    this.categories= this.categoryService.getCategories();
     this.image = this.ServerService.rootUrl+ this.Doctor.image
+    this.Id = this.Doctor.Specialization
+    this.Category = this.categories[this.Id].category;
+    
 
   }
    

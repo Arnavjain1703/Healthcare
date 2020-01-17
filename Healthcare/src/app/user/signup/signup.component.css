@@ -3,8 +3,8 @@ input.ng-invalid.ng-touched {
     border : 2px solid red;
 }
 input {
-    border-left: 5px solid #173E43;
-    
+    border-left: 5px solid #58D68D;
+
 }
 /* Loader */
 .background {
@@ -44,7 +44,7 @@ input {
 }
 .head {
     text-align : center;
-    color : #173E43;
+    color : #58D68D;
     margin:15px;
     margin-bottom:3rem;
 }

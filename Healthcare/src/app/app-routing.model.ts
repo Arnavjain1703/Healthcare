@@ -8,6 +8,7 @@ import { HospitalsComponent } from './user/hospitals/hospitals.component';
 import { DoctorsComponent } from './user/doctors/doctors.component';
 import { ProfileComponent } from './user/doctors/profile/profile.component';
 import { AppoinmentComponent } from './user/appoinment/appoinment.component';
+import { SchemesComponent } from './user/schemes/schemes.component';
 
 
 const appRoutes: Routes=[
@@ -19,8 +20,9 @@ const appRoutes: Routes=[
     {path:'hospital',component:HospitalsComponent},
     {path:'doctor/:id',component:DoctorsComponent},
     {path:'profile/:id/:id2',component:ProfileComponent},
-    {path:'appoinment',component:AppoinmentComponent},
+    {path:'appoinment/:id2',component:AppoinmentComponent},
     {path:'appoinment/:id/:id2',component:AppoinmentComponent},
+    {path:'schemes',component:SchemesComponent},
 
     
 ]

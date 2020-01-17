@@ -18,6 +18,7 @@
 .location
 {
     background: White;
+    z-index: 3;
 }
 
  .button
@@ -39,9 +40,14 @@
 
 
   }
+  .index
+  {
+      position: absolute;
+      width: 100%;
+  }
   .opacity
   {
-      opacity: 0;
+      display: none;
   }
   .width,.width2
   { cursor: pointer;
@@ -87,13 +93,16 @@
 .height
 {
     background-size:cover ;
-    background: url('/assets/images/hospitalbackground2.png');
+    background: url('/assets/images/images.jpg');
     background-repeat:no-repeat;
     background-position :center;
-    padding-bottom: 20%;
+    /* padding-bottom: 20%; */
     
 }   
-
+.image3
+{
+    width:100%;
+}
 .col-sm-6
 {
     text-align:center;

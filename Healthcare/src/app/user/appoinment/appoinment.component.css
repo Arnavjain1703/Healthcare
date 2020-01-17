@@ -1,6 +1,11 @@
 input.ng-invalid.ng-touched {
     border : 2px solid red;
 }
+.background
+{
+    background: #F4F4F4;
+
+}
 textarea.ng-invalid.ng-touched{
     border : 2px solid red;
 
@@ -42,6 +47,7 @@ input {
 {   padding:3% 5%;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     border-radius: 3%;
+    background: white;
 }
 .message
 {

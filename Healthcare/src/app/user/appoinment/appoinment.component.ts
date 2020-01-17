@@ -41,10 +41,14 @@ export class AppoinmentComponent implements OnInit {
     this.radio=true;
 
   }
+
+ 
   onSubmit(Form:NgForm)
   {  this.appC0mponent.loaderOn()
      const value=Form.value
-     this.ServerService.appoinmentDoctor(value.email,value.contact,value.age,value.description,this.Doctor.id,this.Hospital.id)
+     if(this.id)
+     {
+     this.ServerService.appoinmentDoctor(value.email,value.contact,value.age,value.description,this.Doctor.name,this.Hospital.id)
      .subscribe
      (
        (response)=>
@@ -57,4 +61,13 @@ export class AppoinmentComponent implements OnInit {
        }
      )
   }
+
+  else
+  { 
+    
+
+    console.log('jksdnvk');
+  }
+}
+
 }

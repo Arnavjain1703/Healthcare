@@ -1,4 +1,5 @@
-<div *ngIf=" show ||Location == Hospital.city">
+<div *ngIf="show||Location == Hospital.city">
+
 <div class="col-xs-3 background padding">
     
       <div class="shadow">
@@ -14,7 +15,8 @@
 
                <div class="button center">
  
-                        <button (click)="getDoctors()" class="btn"> View Profile</button>                
+                        <button *ngIf =route (click)="getDoctors()" class="btn"> View Profile</button>                
+                        <button *ngIf =!route routerLink="/login" class="btn"> View Profile</button>                
 
                </div>
             

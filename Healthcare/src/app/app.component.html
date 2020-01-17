@@ -1,5 +1,12 @@
  <app-header></app-header>
- <div *ngIf="load || false" class="background">
+ <div class="background"  *ngIf="model" [class.success]="success" [class.warning]="warning">
+ <div class="popups "  >
+    <div class="center margin"><img [src]=srcs></div>
+    <div class=" center">{{sentence}}</div>
+    <div class="center"><button (click)="remove()" class="btn btn-info">ok</button></div>
+</div>
+ </div> 
+ <div *ngIf="load " class="background">
     <div class="loader">
         <div class="loader-circle">
             <div class="loader-circle">

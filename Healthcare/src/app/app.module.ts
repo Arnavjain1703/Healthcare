@@ -28,6 +28,9 @@ import { LocationService } from './services/location.service';
 import { ChangeService } from './services/changeService';
 import { ProfileComponent } from './user/doctors/profile/profile.component';
 import { AppoinmentComponent } from './user/appoinment/appoinment.component';
+import { SchemesComponent } from './user/schemes/schemes.component';
+import { ConfirmPasswordDirective } from './shared/confirm-password.directive';
+import { CategoryService } from './services/category.service';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,7 @@ import { AppoinmentComponent } from './user/appoinment/appoinment.component';
     LoginComponent,
     SignupComponent,
     VerificationComponent,
+    ConfirmPasswordDirective,
     HomepageComponent,
     HeaderComponent,
     FooterComponent,
@@ -46,6 +50,7 @@ import { AppoinmentComponent } from './user/appoinment/appoinment.component';
     DoctorItemComponent,
     ProfileComponent,
     AppoinmentComponent,
+    SchemesComponent,
 
   ],
   imports: [
@@ -59,7 +64,7 @@ import { AppoinmentComponent } from './user/appoinment/appoinment.component';
   
   ],
   providers: [ServerService,HospitalService,DiseaseService,DoctorService,HospitalsComponent,LocationService,HospitalItemComponent
-  , ChangeService,AppComponent ],
+  , ChangeService,AppComponent,CategoryService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
