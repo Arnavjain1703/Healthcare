@@ -1,6 +1,11 @@
-<div class="form-group">
-<div    *ngFor = "let city of Locations ; " class="location">
 
-    <input type="radio" ngModel  name="city" #name="ngModel" ><span>{{city.location}}   </span>
+<div class="center">
+ 
+    Health Related Government Schemes
+
 </div>
-</div>
+<app-schemes-item *ngFor="let schem of schems"
+
+    [schem] = schem
+   >
+</app-schemes-item>

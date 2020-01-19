@@ -64,9 +64,19 @@ export class AppoinmentComponent implements OnInit {
 
   else
   { 
-    
+    this.ServerService.appoinmentHospital(value.email,value.contact,value.age,value.description,this.Hospital.id)
+    .subscribe
+    (
+      (response)=>
+      { this.appC0mponent.loaderOff();
+        console.log(response)
+      },
+      error =>
+      {
+        this.appC0mponent.loaderOff()
+      }
+    )
 
-    console.log('jksdnvk');
   }
 }
 

@@ -1,19 +1,20 @@
 
  <div class="background " >
-
+    
     <div class="row">
    <div class="col-lg-1"></div>
    
    <div class="col-lg-5 center">
-  <img class="image"src = "{{image}}">
+      <img src="/assets/images/doctorji2.svg">
    </div>
 
    <!-- <div class="col-lg-1"></div> -->
    <div class="col-lg-4 ">
      
-    <div class="details padding back" >
+    <div class="details padding back center" >
+      <img class="image"src = "{{image}}">
       <div class="detail"> <span class="name">  Name  </span>: {{Doctor.name}} </div>
-      <div class="detail"> <span class="name">  Specialist of  </span>: {{Category}}</div>
+      <div class="detail"> <span class="name">  Specialist of  </span>: {{Doctor.Specialization}}</div>
     {{Doctor.Description}}
       <div class="width" (click)="appoinment()"> Apply for Appoinment</div>
       

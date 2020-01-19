@@ -1,8 +1,10 @@
 .back2
 {
-    background:url('/assets/images/profilebackground2.svg');
+    background:url('/assets/images/profilebackground.svg');
+    /* background:#F4F4F4; */
+    
     background-repeat:no-repeat ;
-    padding-top:3%;
+    
 
 }
 
@@ -32,8 +34,8 @@
     border-radius: 50% 50%;
 
     border:2px solid #8BC23A;
-    width:400px;
-    height:400px;
+    width:250px;
+    height:250px;
     
 }
 
@@ -79,7 +81,9 @@
     color:#048739;
     font-family: 'Montserrat', sans-serif;
     font-size: 140%;
-
+    font-weight: 800;
+    background: white;
+    
 }
 .margin
 {
@@ -103,7 +107,7 @@
   border-radius: 50px 50px;   
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 2px;
- 
+  cursor: pointer;
    
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
    transition: box-shadow 0.3s;

@@ -3,12 +3,12 @@ export class Doctor
     image:String;
     name:String;
     Description:String;
-    Specialization:number;
+    Specialization:String;
     id:number
 
 
 
-constructor( image:String ,name:String,description:String,specility:number)
+constructor( image:String ,name:String,description:String,specility:String)
 {
      this.image=image;
      this.Description=description;

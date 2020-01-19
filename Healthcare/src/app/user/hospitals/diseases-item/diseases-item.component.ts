@@ -53,7 +53,7 @@ export class DiseasesItemComponent implements OnInit {
 ,
        error =>
        {
-         this.appcomponent.loaderOff();
+        //  this.appcomponent.loaderOff();
        }
      )
 

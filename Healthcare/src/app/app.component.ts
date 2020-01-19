@@ -8,12 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Healthcare';
   load:boolean;
-  model=false;
+  model1=false;
+  model2=false;
 success=false;
 warning=false;
 //  srcs:String;
-srcs:String
- sentence:string
+srcs:String;
+ sentence:String;
 
 
    loaderOn()
@@ -33,9 +34,8 @@ SuccessModel( sentence:string)
 {
   this.srcs="/assets/images/tic.png";
   this.sentence=sentence;
-  this.model=true;
-  this.success=true;
-  this.warning=false;
+  this.model1=true;
+ 
 
 }
 
@@ -43,15 +43,16 @@ WarningModel( sentence:string)
 {
   this.srcs="/assets/images/cross.png";
   this.sentence=sentence;
-  this.model=true;
-  this.warning=true;
-  this.success=false;
+  this.model2=true;
+  
 
 }
 remove()
 {
-  this.model=false;
+  this.model1=false;
+  this.model2=false;
 }
+
 
 
 }

@@ -1,0 +1,27 @@
+.scheme
+{
+    padding:3% ;
+     margin:3%;
+     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+     background:url('/assets/images/schemebackground.svg');
+
+
+}
+.name
+{
+    color:#048739 ;
+    font-Size:180%;
+    font-weight:800;
+    font-family: 'Montserrat', sans-serif;
+    margin:1%;
+    letter-spacing: 2px;
+
+
+}
+.description
+{
+    color:#8BC23A;
+    font-size:160%;
+    font-family: 'Montserrat', sans-serif;
+     letter-spacing: 2px;
+}

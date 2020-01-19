@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ServerService } from 'src/app/services/serverService';
 import { Router } from '@angular/router';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,8 @@ export class LoginComponent implements OnInit {
   tk:any;
 
   constructor( public serverservice: ServerService,
-               private router :Router) { }
+               private router :Router,
+               private appComponent:AppComponent) { }
 
   ngOnInit() {
   }
@@ -25,24 +27,30 @@ export class LoginComponent implements OnInit {
  
 
   onLogin(form : NgForm) {
-    this.load=true;
+   this.appComponent.loaderOn();
    
     const value = form.value;
     this.serverservice.logInUser(value.email,value.password)
     .subscribe(
       (response) => {
+        this.appComponent.loaderOff()
         console.log(response);
         this.tk=response;
         console.log(this.tk.token);
         this.load=false;
         localStorage.setItem('token',this.tk.token);
-        this.router.navigate(['frontpage'])
+        this.router.navigate(['hospital'])
 
                    },
 
         error =>
-        {
-            this.load = false;
+        { 
+          this.appComponent.loaderOff();
+
+          console.log(error)
+          this.appComponent.WarningModel(error.error.non_field_errors)
+  
+             
         }           
       
            

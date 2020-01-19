@@ -8,7 +8,7 @@ export class ServerService
 {
 
 
-public rootUrl="https://d380b38d.ngrok.io";
+public rootUrl="https://ca339260.ngrok.io";
 
 
 constructor( 
@@ -25,7 +25,7 @@ logInUser(email:string ,password:string)
   const headers = new HttpHeaders({'Content-Type':'application/json'});
   console.log(JSON.stringify({email,password}));
   console.log(this.rootUrl+'/login')
- return this.http.post(this.rootUrl+'/login/',JSON.stringify({email,password}),{headers:headers})
+ return this.http.post(this.rootUrl+'/quickstart/login/',JSON.stringify({email,password}),{headers:headers})
  
   
 }
@@ -75,7 +75,15 @@ appoinmentDoctor(email:string,contact:number,age:number,description:String,docto
 
   
 }
-
+appoinmentHospital(email:string,contact:number,age:number,description:String,hospital_name:Number)
+{
+  const headers = new HttpHeaders({'Content-Type':'application/json'});
+  console.log(JSON.stringify({email,contact,age,description,hospital_name}));
+  console.log(this.rootUrl+'/quickstart/make_happointment/')
+  return this.http.post(this.rootUrl+'/quickstart/make_happointment/',JSON.stringify({email,contact,age,description,hospital_name}),{headers:headers})
+ 
+   
+}
 Specilization()
 {
     return this.http.get(this.rootUrl+'/speciality/')
@@ -87,7 +95,7 @@ getdoctors(id:Number)
 getLocation()
 {
    return this.http.get(this.rootUrl+'/city/')
-   console.log(this.rootUrl+'/city/')
+     
 }
 
 loggedIn()

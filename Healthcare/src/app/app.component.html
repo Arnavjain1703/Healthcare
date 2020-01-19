@@ -1,14 +1,21 @@
  <app-header></app-header>
- <div class="background"  *ngIf="model" [class.success]="success" [class.warning]="warning">
- <div class="popups "  >
+ <div class="background"  *ngIf="model1" >
+ <div class="popups success "  >
     <div class="center margin"><img [src]=srcs></div>
     <div class=" center">{{sentence}}</div>
     <div class="center"><button (click)="remove()" class="btn btn-info">ok</button></div>
 </div>
  </div> 
+ <div class="background"  *ngIf="model2" >
+    <div class="popups warning "  >
+       <div class="center margin"><img [src]=srcs></div>
+       <div class=" center">{{sentence}}</div>
+       <div class="center"><button (click)="remove()" class="btn">ok</button></div>
+   </div>
+    </div> 
  <div *ngIf="load " class="background">
-    <div class="loader">
-        <div class="loader-circle">
+    <!-- <div class="loader"> -->
+        <!-- <div class="loader-circle">
             <div class="loader-circle">
                 <div class="loader-circle">
                     <div class="loader-circle">
@@ -17,6 +24,8 @@
                 </div>
             </div>
         </div>
+    </div> -->
+    <div class="loader"></div>
     </div>
-</div>
+
 <router-outlet></router-outlet>

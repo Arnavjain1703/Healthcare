@@ -1,0 +1,16 @@
+.center
+{   
+
+    text-align: center;
+    font-size: 180%;
+    padding:5%;
+    /* background: url('/assets/images/profilebackground.svg'); */
+
+    background-repeat:no-repeat ;
+    background-size:cover ;
+    /* background-position:center ; */
+    font-size: 180%;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #048739;
+}

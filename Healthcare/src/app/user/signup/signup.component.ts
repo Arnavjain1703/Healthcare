@@ -5,6 +5,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 
 import { Router, NavigationEnd } from '@angular/router';
 import { ServerService } from 'src/app/services/serverService';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-signup',
@@ -18,7 +19,8 @@ export class SignupComponent implements OnInit {
   load=false;
 
   constructor(private serverservice: ServerService,
-              private router: Router,) { }
+              private router: Router,
+              private appComponent:AppComponent) { }
 
   ngOnInit() {
     this.load=false;
@@ -31,20 +33,24 @@ export class SignupComponent implements OnInit {
   }
 
   onSignup(form : NgForm) {
-    this.load=true;
+     this.appComponent.loaderOn();
     console.log(JSON.stringify(form.value));
     const value = form.value;
     this.serverservice.signUpUser(value.name,value.email,value.password,value.confirmPassword)
     .subscribe(
-      (response) => {
+      (response :Response) => {
+        this.appComponent.loaderOff();
         this.tk=response;
         this.id=this.tk.user_id;
         console.log(this.tk.details);
-        this.router.navigate(['/verification/'+this.id]);
+        this.router.navigate(['/verification/'+this.id + '/' + value.name]);
       },
       (error: HttpErrorResponse) =>{
-        console.log(error);
-        this.load=false;
+        this.appComponent.loaderOff();
+
+        console.log(error.error.email)
+        this.appComponent.WarningModel(error.error.email)
+
       },
     );
   }

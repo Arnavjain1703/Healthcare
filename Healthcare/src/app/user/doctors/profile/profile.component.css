@@ -8,9 +8,10 @@
 {
     border-radius:3%;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    color:#048739;
+    color:#8BC23A;
     font-family: 'Montserrat', sans-serif;
     font-size: 140%;
+    font-weight:700;
 
 }
 
@@ -35,14 +36,19 @@
     border-radius: 50% 50%;
 
     border:2px solid #8BC23A;
-    width:300px;
-    height:300px;
+    width:150px;
+    height:150px;
     
+}
+.name
+{
+    color: #048739;
 }
 .background
 {
-    padding-top:10%;
-    background: #F4F4F4;
+    padding-top:7%;
+     background: url("/assets/images/bg.svg");
+     background-repeat:no-repeat;
     padding-bottom: 10%;
 }
 .width

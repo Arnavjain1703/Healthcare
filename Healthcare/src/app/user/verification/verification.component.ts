@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { ServerService } from 'src/app/services/serverService';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-verification',
@@ -13,6 +14,7 @@ export class VerificationComponent implements OnInit {
   resend=false;
   name:any;
   tk:any;
+  id:any
   seconds:number=59;
   minute:number=1;
 
@@ -22,10 +24,13 @@ export class VerificationComponent implements OnInit {
             
               constructor(private serverservice: ServerService,
                           private route: ActivatedRoute,
-                          private router: Router,) { }
+                          private router: Router,
+                          private appComponent:AppComponent) { }
             
               ngOnInit() {
                 this.name = this.route.snapshot.params.id;
+                this.id = this.route.snapshot.params.id2;
+
             
                 setTimeout(() => {
                   this.resend=true;
@@ -71,12 +76,14 @@ export class VerificationComponent implements OnInit {
             
               Verify(form : NgForm) {
                 const value = form.value;
+                this.appComponent.loaderOn();
                 // console.log(this.id);
                 this.serverservice.verifyUser(value.otp, this.name)
                 .subscribe(
                   (response) =>{ 
                     this.tk = response ;
                     console.log(this.tk);
+                    this.appComponent.loaderOff();
                     // console.log(this.tk.userLoginResponse.userName);
                     localStorage.setItem('token', this.tk.token);
                     // localStorage.setItem('name',this.tk.userLoginResponse.userName);

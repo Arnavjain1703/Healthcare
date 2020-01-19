@@ -9,13 +9,14 @@ import { DoctorsComponent } from './user/doctors/doctors.component';
 import { ProfileComponent } from './user/doctors/profile/profile.component';
 import { AppoinmentComponent } from './user/appoinment/appoinment.component';
 import { SchemesComponent } from './user/schemes/schemes.component';
+import { QueryComponent } from './user/query/query.component';
 
 
 const appRoutes: Routes=[
     {path:'', redirectTo:'frontpage',pathMatch:'full'},
     {path:'login',component:LoginComponent},
     {path:'signup',component:SignupComponent},
-    {path:'verification/:id',component:VerificationComponent},
+    {path:'verification/:id/:id2',component:VerificationComponent},
     {path:'frontpage',component:HomepageComponent},
     {path:'hospital',component:HospitalsComponent},
     {path:'doctor/:id',component:DoctorsComponent},
@@ -23,6 +24,7 @@ const appRoutes: Routes=[
     {path:'appoinment/:id2',component:AppoinmentComponent},
     {path:'appoinment/:id/:id2',component:AppoinmentComponent},
     {path:'schemes',component:SchemesComponent},
+    {path:'query',component:QueryComponent}
 
     
 ]

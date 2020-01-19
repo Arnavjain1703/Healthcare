@@ -31,6 +31,9 @@ import { AppoinmentComponent } from './user/appoinment/appoinment.component';
 import { SchemesComponent } from './user/schemes/schemes.component';
 import { ConfirmPasswordDirective } from './shared/confirm-password.directive';
 import { CategoryService } from './services/category.service';
+import { SchemesItemComponent } from './user/schemes/schemes-item/schemes-item.component';
+import { schemeService } from './services/scheme.service';
+import { QueryComponent } from './user/query/query.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +54,8 @@ import { CategoryService } from './services/category.service';
     ProfileComponent,
     AppoinmentComponent,
     SchemesComponent,
+    SchemesItemComponent,
+    QueryComponent,
 
   ],
   imports: [
@@ -64,7 +69,7 @@ import { CategoryService } from './services/category.service';
   
   ],
   providers: [ServerService,HospitalService,DiseaseService,DoctorService,HospitalsComponent,LocationService,HospitalItemComponent
-  , ChangeService,AppComponent,CategoryService ],
+  , ChangeService,AppComponent,CategoryService,schemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
