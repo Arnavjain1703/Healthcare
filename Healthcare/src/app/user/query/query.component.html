@@ -1,1 +1,40 @@
-<p>query works!</p>
+ <div class="background">
+<div class="row padding2">
+    <div class="col-lg-6">
+      <img src="/assets/images/Mail_sent.svg">
+    </div>
+    <div class="col-lg-6 padding">
+        <div class="shadow">
+            <div class="center"> Enter any of your Query</div>
+            <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    
+                                
+                
+ 
+             
+            <div class="form-group">
+
+                <textarea
+                 class="message"
+                 name="Query" 
+                 required
+                 ngModel
+                  #message="ngModel" >
+                </textarea
+                >
+                    
+                
+                <span 
+                class="help-block"
+                *ngIf="!message.valid && message.touched"
+                style="color:red;">Please Enter Your Problem Details</span>
+            </div>
+            
+            <div class="center">
+            <button type="submit" class="btn mybutton" [disabled]="!f.valid">Apply</button>
+            </div>
+        </form>
+    </div>
+ </div>
+    </div>
+</div> 

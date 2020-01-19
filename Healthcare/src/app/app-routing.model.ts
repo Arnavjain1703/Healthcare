@@ -10,6 +10,7 @@ import { ProfileComponent } from './user/doctors/profile/profile.component';
 import { AppoinmentComponent } from './user/appoinment/appoinment.component';
 import { SchemesComponent } from './user/schemes/schemes.component';
 import { QueryComponent } from './user/query/query.component';
+import { HsignupComponent } from './hospital/hauth/hsignup/hsignup.component';
 
 
 const appRoutes: Routes=[
@@ -24,7 +25,8 @@ const appRoutes: Routes=[
     {path:'appoinment/:id2',component:AppoinmentComponent},
     {path:'appoinment/:id/:id2',component:AppoinmentComponent},
     {path:'schemes',component:SchemesComponent},
-    {path:'query',component:QueryComponent}
+    {path:'query/:id',component:QueryComponent},
+    {path:'hsignup',component:HsignupComponent}
 
     
 ]

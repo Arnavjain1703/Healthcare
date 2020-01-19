@@ -13,8 +13,8 @@ export class AppComponent {
 success=false;
 warning=false;
 //  srcs:String;
-srcs:String;
- sentence:String;
+srcs="/assets/images/cross.png";
+ sentence ="Hello! Your appoinment has been submited you will be informed soon";
 
 
    loaderOn()

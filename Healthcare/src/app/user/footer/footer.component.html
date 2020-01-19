@@ -1,1 +1,25 @@
-<p>footer works!</p>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat|Poppins|Roboto&display=swap');
+</style>
+<footer class="fstyle">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4" style="margin-top:6rem;"><img class="image" src="assets/images/footer.png" alt="robot"></div>
+            <div class="col-lg-4 text-center content">
+                <h2 style="margin-top:6rem;"><b>GET APPOINMENT BY SPECILIZED DOCTORS </b></h2>
+                <h5 style="margin:2rem;">
+                    Sign up and get all details of Hospitals and Specilized Doctors
+                </h5>
+                <p><a routerLink="/signup"><button *ngIf="!authservice.loggedIn()" class="btn btn-success mybtn">SignUp - It's free</button></a></p>
+            </div>
+            <div class="col-lg-4"><img src="assets/images/footer2.svg" alt="robot"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <h6 class="text-center" style="color:black"> © Copyright 2019. All rights reserved.</h6>
+            </div>
+            <div class="col-lg-4"></div>
+        </div>
+    </div>
+</footer>

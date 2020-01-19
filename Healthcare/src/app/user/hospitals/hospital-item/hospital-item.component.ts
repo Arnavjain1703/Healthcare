@@ -64,10 +64,11 @@ getDoctors()
        this.tk= response;
         this.doctorService.SetDoctors(this.tk)
         this.router.navigate(['doctor/'+this.index])
+        this.appComponent.loaderOff();
+
     },
     error =>
     {
-      this.appComponent.loaderOff();
       this.router.navigate(['doctor/'+this.index])
 
     }

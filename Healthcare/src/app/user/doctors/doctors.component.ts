@@ -65,5 +65,12 @@ export class DoctorsComponent implements OnInit {
   {
        this.router.navigate(['appoinment/'+this.id])
   }
+
+  query()
+  {
+      this.router.navigate(['query/' +this.id])
+  }
+
+
    
 }

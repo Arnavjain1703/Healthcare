@@ -1,9 +1,13 @@
 
-
+.left
+{
+    padding-left:22px ;
+}
 
 .search
 {
      text-align:center;
+     padding-top:4%;
 }
 .heading
 {
@@ -29,6 +33,7 @@
       transition: color 0.2s;
       transition: box-shadow 0.2s;
       font-size: 120%;
+      z-index:8;
 
 
   }
@@ -90,18 +95,11 @@
     color:#048739;
 
 }
-.height
-{
-    background-size:cover ;
-    background: url('/assets/images/images.jpg');
-    background-repeat:no-repeat;
-    background-position :center;
-    /* padding-bottom: 20%; */
-    
-}   
+ 
 .image3
 {
     width:100%;
+
 }
 .col-sm-6
 {

@@ -34,6 +34,8 @@ import { CategoryService } from './services/category.service';
 import { SchemesItemComponent } from './user/schemes/schemes-item/schemes-item.component';
 import { schemeService } from './services/scheme.service';
 import { QueryComponent } from './user/query/query.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HsignupComponent } from './hospital/hauth/hsignup/hsignup.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +58,7 @@ import { QueryComponent } from './user/query/query.component';
     SchemesComponent,
     SchemesItemComponent,
     QueryComponent,
+    HsignupComponent
 
   ],
   imports: [
@@ -64,7 +67,11 @@ import { QueryComponent } from './user/query/query.component';
     FormsModule,
     HttpClientModule,
     ParticlesModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,  
+  
+
+
     
   
   ],

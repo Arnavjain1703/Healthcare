@@ -1,7 +1,7 @@
 .image
 {
     height:auto;
-    width:80%
+    width:70%;
 }
 .image1{
     width: 100%;
@@ -52,9 +52,23 @@
     padding-right: 10%;
 
 }
+
+.padding3
+{
+    padding-top:10%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
 .padding-3
 {
     padding-top: 3%;
+}
+
+.padding2
+{
+    padding-top:6%;
+    padding-bottom:6% ;
 }
 .background2
 {

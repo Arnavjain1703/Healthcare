@@ -36,9 +36,11 @@ export class LoginComponent implements OnInit {
         this.appComponent.loaderOff()
         console.log(response);
         this.tk=response;
-        console.log(this.tk.token);
+       
+         localStorage.setItem('user_id',this.tk.user_id)
         this.load=false;
         localStorage.setItem('token',this.tk.token);
+        localStorage.setItem('email',this.tk.email)
         this.router.navigate(['hospital'])
 
                    },

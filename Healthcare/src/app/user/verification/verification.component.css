@@ -8,24 +8,24 @@ input.ng-invalid.ng-touched {
     box-shadow:2px 2px 10px rgba(0,0,0,0.2);
 }
 .mybutton {
-    border:2px solid #3FB0AC;
+    border:2px solid #8BC23A;
     background-color:transparent;
-    color:#3FB0AC;
+    color:#048739;
     margin-left:8rem;
 }
 .mybutton:hover {
-    background-color:#3FB0AC;
+    background-color:#8BC23A;
     color:white;
     transition:all 0.2s ease-in-out;
 }
 .resend {
-    border:2px solid #173E43;
+    border:2px solid #8BC23A;
     background-color:transparent;
-    color:#173E43;
+    color:#048739;
     margin-left:7rem;
 }
 .resend:hover {
-    background-color:#173E43;
+    background-color:#8BC23A;
     color:white;
     transition:all 0.2s ease-in-out;
 }

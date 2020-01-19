@@ -1,7 +1,7 @@
 <div class="back">
-<div class="height ">
+
 <img class="image3" src="/assets/images/images.png">
-</div>
+
 </div>
 
 <div class=" Heading">  Search Hospital According to Your Need  </div>
@@ -23,16 +23,16 @@
 
     
  </div>
- <div *ngIf=show2  class="search">
+ <div   class="search">
     
     <div class="row ">
-        <div class="col-lg-3">
+        <div class="col-lg-5">
 
         </div>
         <div class="col-lg-2">
               
             <div class="width" (click) = "click()">
-                 Location
+                   Location
             </div>
             <div [class.opacity] = "!show " class="index" >
             <div    *ngFor = "let Location of Locations  " class="location">
@@ -40,10 +40,8 @@
             </div>
             </div>
         </div>
-         <div class="col-lg-4">
-        <div class="width2">
-           Search  Hospital  with your preffered location
-        </div>
+         <div class="col-lg-5">
+        
         </div>
     </div>
     </div>
@@ -59,13 +57,13 @@
 
 
 
-<div class="row" >
+<div class="row left" >
        
     
 
     <app-hospital-item
      
-    *ngFor="let item of  Hospitals, let i = index" 
+    *ngFor="let item of  Hospitals  | slice:0:10, let i = index  " 
      
     [Hospital]=item
      [index] = i

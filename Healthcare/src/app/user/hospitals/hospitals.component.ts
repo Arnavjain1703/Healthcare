@@ -56,7 +56,7 @@ export class HospitalsComponent implements OnInit {
 
   ngOnInit() {
 
-  
+     
   
     this.serverService.getLocation()
     .subscribe(
@@ -67,9 +67,23 @@ export class HospitalsComponent implements OnInit {
         this.locationService.setService(this.tk)
          this.appComponent.loaderOff();
       }
+
     )
+
+
   
     
+    this.serverService.getAllHospital()
+      .subscribe(
+        (response)=>
+        {
+          this.tk=response;
+          console.log(this.tk)
+          this.hospitalService.SetService(this.tk)
+          this.appComponent.loaderOff()
+
+        })
+
     
 
     
@@ -94,7 +108,7 @@ export class HospitalsComponent implements OnInit {
        error=> 
        { 
         
-         this.appComponent.loaderOff();
+         
        }
 
      )

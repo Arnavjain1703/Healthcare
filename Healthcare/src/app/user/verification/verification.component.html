@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4 box">       
-            <h3 class="text-center" style="color:#173E43;"><b>Verify Your Credentials {{ id }}</b></h3>
+            <h3 class="text-center" style="color:#048739; "><b>Verify Your Credentials {{ id }}</b></h3>
             <form (ngSubmit)="Verify(f)" #f="ngForm" class="myform">
                 <div *ngIf="!resend">
                     <div class="form-group">
@@ -23,7 +23,7 @@
                         style="color:red;">Enter valid otp</span>
                         <div
                         class="help-block"
-                        style="color:blue;">OTP will expire in <span style="color:red;">{{ minute }} : {{ seconds }}</span> minutes</div>
+                        style="color:green;">OTP will expire in <span style="color:red;">{{ minute }} : {{ seconds }}</span> minutes</div>
                     </div>
                     <button 
                     type="submit" 

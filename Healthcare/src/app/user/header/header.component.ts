@@ -15,9 +15,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  loader()
-  {
-    this.appCOmponent.loaderOn();
-  }
+
 
 }

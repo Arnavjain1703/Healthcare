@@ -1,6 +1,6 @@
 .background
 {
-    width:305px;
+    width:300px;
 }
 
 .center
@@ -24,13 +24,16 @@
 .font
 {
     font-family: 'Montserrat', sans-serif;
-   text-align: center;
    
+   
+}
+.padding{
+    padding-left: 2%;
 }
 .name
 {
    color:#048739;
-   font-weight:800;
+   font-weight:700;
      width: 130%;
 
 

@@ -1,6 +1,6 @@
 .background
 {
-    width:305px;
+    width:300px;
 }
 
 .center
@@ -39,7 +39,7 @@
 .font
 {
     font-family: 'Montserrat', sans-serif;
-    text-align: center;
+    /* text-align: center; */
 }
 .shadow:hover
 {

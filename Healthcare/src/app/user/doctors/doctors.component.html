@@ -21,9 +21,9 @@
       <div class="detail"> <span class="name"> Hospital Name  </span>: {{Hospital.hospital_name}} </div>
       <div class="detail"> <span class="name">  Address  </span>: {{Hospital.street_name}}</div>
       <!-- <div class="detail"> <span class="name">  Email </span>:{{Hospital.email}}</div> -->
-      <div class="detail">  <span class="name">  contact number </span> :{{Hospital.contact}}</div>
+      <div class="detail">  <span class="name">  Contact Number </span> :{{Hospital.contact}}</div>
       <div class="width" (click)="appoinment()"> Apply for Appoinment</div>
-      <div class="width"   routerLink = "/query"> Any query</div>
+      <div class="width"   (click)="query()"> Any Query</div>
 
       
  
@@ -45,7 +45,7 @@
         </div>
         <div class="col-lg-5  center">
             <div class="sentence">
-            Get appointment with Doctor Of Your Preference
+            Get appointment with Doctor Of your preference
            </div>         
         </div>
         <div class=" col-lg-2">
@@ -57,7 +57,7 @@
 
 
 
-<div class ="row">
+<div class ="row padding2">
 
 <app-doctor-item
      

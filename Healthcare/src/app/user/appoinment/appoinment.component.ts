@@ -25,7 +25,8 @@ export class AppoinmentComponent implements OnInit {
    id:number;
    id2:number;
    Doctor:Doctor;
-   Hospital:Hospital
+   tk:any;
+   Hospital:Hospital;
    
   ngOnInit() {
     this.radio=false;
@@ -54,10 +55,13 @@ export class AppoinmentComponent implements OnInit {
        (response)=>
        { this.appC0mponent.loaderOff();
          console.log(response)
+         this.tk = response;
+         this.appC0mponent.SuccessModel(this.tk);
+
        },
        error =>
        {
-         this.appC0mponent.loaderOff()
+     
        }
      )
   }
@@ -69,11 +73,13 @@ export class AppoinmentComponent implements OnInit {
     (
       (response)=>
       { this.appC0mponent.loaderOff();
+        this.tk = response;
+        this.appC0mponent.SuccessModel(this.tk);
         console.log(response)
       },
       error =>
       {
-        this.appC0mponent.loaderOff()
+       
       }
     )
 

@@ -1,0 +1,14 @@
+.fstyle {
+    font-family: 'Montserrat', sans-serif;
+    background:#F4F4F4;
+}
+.content {
+    color:#8BC23A;
+}
+.mybtn:focus {
+    outline:none;
+}
+.image
+{
+     height: 300px;
+}

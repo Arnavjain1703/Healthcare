@@ -8,7 +8,7 @@ export class ServerService
 {
 
 
-public rootUrl="https://ca339260.ngrok.io";
+public rootUrl="https://9176c8a9.ngrok.io";
 
 
 constructor( 
@@ -62,7 +62,7 @@ getDiseases()
 getHospital(id:Number)
 {
    return this.http.get(this.rootUrl+'/quickstart/category/'+id+'/' );
-   console.log(id)
+   
 
 }
 
@@ -105,7 +105,29 @@ loggedIn()
 logout()
   {
     localStorage.removeItem('token');
+    localStorage.removeItem('user_id')
 
   }
+  hsignup(fd:FormData) {
+    console.log(fd);
+      return this.http.post(this.rootUrl+'/quickstart/signup_as_hospital/',fd);
+  }
   
+  getAllHospital()
+  {
+    return this.http.get(this.rootUrl+'/quickstart/hospitals/')
+
+
+  }
+
+   query( Query:String,hospital_name:Number , email)
+   {
+    // return this.http.post(this.rootUrl+'/quickstart/make_enquiry/'+localStorage.getItem('user_id')+'/' +hospital_id +'/')
+    const headers = new HttpHeaders({'Content-Type':'application/json'});
+    console.log(JSON.stringify({Query,hospital_name,email}));
+    console.log(this.rootUrl+'/quickstart/make_enquiry/'+localStorage.getItem('user_id')+'/')
+    return this.http.post(this.rootUrl+'/quickstart/make_enquiry/'+localStorage.getItem('user_id')+'/' +hospital_name+'/',JSON.stringify({Query,hospital_name,email}),{headers:headers})
+
+     
+   }
 }

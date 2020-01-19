@@ -1,31 +1,45 @@
- <app-header></app-header>
- <div class="background"  *ngIf="model1" >
- <div class="popups success "  >
-    <div class="center margin"><img [src]=srcs></div>
-    <div class=" center">{{sentence}}</div>
-    <div class="center"><button (click)="remove()" class="btn btn-info">ok</button></div>
+ <div [class.block]= "load">
+    <div [class.block]= "model2">
+        <div [class.block]= "model1">
+        
+        
+    
+
+
+
+ <app-header ></app-header>
+
+<div class="margin">
+
 </div>
- </div> 
- <div class="background"  *ngIf="model2" >
-    <div class="popups warning "  >
+
+ <router-outlet></router-outlet>
+ <app-footer></app-footer>
+
+ 
+
+
+</div>
+
+</div>
+ </div>
+<div *ngIf="load " class="background">
+    
+    <div class="loader"></div>
+
+</div>
+<div class="background"  *ngIf="model1" >
+    <div class="popups success "  >
        <div class="center margin"><img [src]=srcs></div>
        <div class=" center">{{sentence}}</div>
-       <div class="center"><button (click)="remove()" class="btn">ok</button></div>
+       <div class="center"><button (click)="remove()" class="btn ">ok</button></div>
    </div>
     </div> 
- <div *ngIf="load " class="background">
-    <!-- <div class="loader"> -->
-        <!-- <div class="loader-circle">
-            <div class="loader-circle">
-                <div class="loader-circle">
-                    <div class="loader-circle">
-                        <div class="loader-circle"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <div class="loader"></div>
-    </div>
-
-<router-outlet></router-outlet>
+    <div class="background"  *ngIf="model2" >
+       <div class="popups2 warning "  >
+          <div class="center margin"><img [src]=srcs></div>
+          <div class=" center">{{sentence}}</div>
+          <div class="center"><button (click)="remove()" class="btn2">ok</button></div>
+      </div>
+   </div> 
+ 
